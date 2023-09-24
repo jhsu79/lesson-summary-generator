@@ -15,7 +15,8 @@
 <img width="500" alt="Screenshot 2023-09-23 at 11 38 52 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/0cf27143-4e91-4282-8fd3-3c80d935f124">
 <img width="500" alt="Screenshot 2023-09-23 at 11 39 02 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/9961cfc0-6ab9-463f-93aa-dfbf6f3bc073">
 <img width="500" alt="Screenshot 2023-09-23 at 11 38 32 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d79a9f0e-0891-4670-b2c0-fb0e10fedad9">
-<img width="500" alt="Screenshot 2023-09-23 at 11 38 32 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/caa7e4f5-5764-409f-b712-75d02acfa6c1">
+<img width="517" alt="Screenshot 2023-09-23 at 11 39 09 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d6679e53-4460-40e6-9323-7188197aa601">
+
 
 
 Link to Wireframes: https://lucid.app/lucidspark/db9dd6dc-0323-49a8-9144-aee51fee253f/edit?page=0_0&invitationId=inv_9f52bceb-7de6-4005-bc8d-0ad7ce572c8a#
