@@ -31,6 +31,7 @@ Link to API Documentation: https://platform.openai.com/docs/api-reference
 
 
 ## Basic ERD:  
+![Lesson Note Generator (1)](https://github.com/jhsu79/lesson-note-generator/assets/137417888/5086882a-21ac-42d9-aebb-def899ce355a)
 
 ## User Stories: 
 There are four layers to the stories: concepts, students, lesson notes, 
