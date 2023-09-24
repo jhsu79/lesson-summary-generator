@@ -10,6 +10,7 @@
 
 ## Wireframes: 
 <img width="500" alt="Screenshot 2023-09-23 at 11 46 33 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/9244c54c-563e-4616-a74d-7d8f0bc9dec2">
+<br>
 <img width="500" alt="Screenshot 2023-09-23 at 11 46 39 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/fd12af44-91ef-4dc5-9132-5952fd431bab">
 <img width="500" alt="Screenshot 2023-09-23 at 11 38 22 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/eedc0658-54e5-4398-9507-354e273e1b95">
 <img width="500" alt="Screenshot 2023-09-23 at 11 38 52 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/0cf27143-4e91-4282-8fd3-3c80d935f124">
