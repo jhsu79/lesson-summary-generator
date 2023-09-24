@@ -9,7 +9,7 @@
 1. React 
 
 ## Wireframes: 
-
+Link to Wireframes: https://lucid.app/lucidspark/db9dd6dc-0323-49a8-9144-aee51fee253f/edit?page=0_0&invitationId=inv_9f52bceb-7de6-4005-bc8d-0ad7ce572c8a#
 
 ## Relevant Links: 
 Link to GitHub Repo: https://github.com/jhsu79/lesson-note-generator
