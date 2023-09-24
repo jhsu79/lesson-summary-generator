@@ -6,7 +6,6 @@
 ## Technologies Used 
 1. Django 
 1. OpenAI 
-1. React 
 
 ## Wireframes: 
 <img width="500" alt="Screenshot 2023-09-23 at 11 46 33 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/9244c54c-563e-4616-a74d-7d8f0bc9dec2">
@@ -27,6 +26,57 @@ Link to GitHub Repo: https://github.com/jhsu79/lesson-note-generator
 Link to API Documentation: https://platform.openai.com/docs/api-reference
 
 ## Models
+| Instructor    | Type Of Data  |
+|---------------|---------------|
+| instructor_id | id            |
+| first_name    | CharField     |
+| last_name     | CharField     |
+
+| Student          | Type of Data |
+|------------------|--------------|
+| student_id       | id           |
+| last_name        | CharField    |
+| graduation_year  | DateField    |
+| program_type     | TextField    |
+
+| Concept                       | Type of Data |
+|-------------------------------|--------------|
+| concept_id                    | id           |
+| concept_mame                  | CharField    |
+| concept_description           | TextField    |
+
+| Lessons               | Type of Data              |
+|-----------------------|---------------------------|
+| lesson_id             | id                        |
+| instructor_id         | instructor_id             |
+| student_id            | student_id                |
+| lesson_date           | DateField                 |
+| hw_completed_lvl      | NumField                  |
+| homework_accuracy_lvl | NumField                  |
+| homework_notes        | TextField                 |
+| concept1              | concept_id (Select from)  |
+| concept2              | concept_id (Select from)  |
+| concept3              | concept_id (Select from)  |
+| concept1_notes.       | Text Field                |
+| concept2_notes.       | Text Field                |
+| concept3_notes.       | Text Field                |
+| hw_assigned           | BooleanField              |
+| next_homework         | TextField                 |
+| next_lesson_date      | DateField                 |
+
+| Lesson Summaries   | Type of Data   |
+|--------------------|----------------|
+| lesson_summary_id  | id             |
+| lesson_id          | lesson_note-id |
+| instructor_id      | instructor_id  |
+| student_id         | student_id     |
+| concept_id         | concept_id     |
+| homework_summary   | TextField      |
+| concept_summary    | TextField      |
+| assignments        | TextField      |
+| next_homework      | TextField      |
+| next_lesson_date   | TextField      |
+
 
 
 ## Basic ERD:  
@@ -60,8 +110,9 @@ There are four layers to the stories: concepts, students, lesson notes,
 ## Stretch Goals: 
 1. OAuth that allows for multiple instructors 
 2. Adding Subtopics with their own distinct keywords for Concepts. 
-3. Adding grammar, tone and style buttons that can prompt the LSG to revise summaries based on the preferences of the instructor and needs of the student's families. 
-4. Adding calendar widgets to date settings.    
+3. Refactor template components into React. 
+1. Adding grammar, tone and style buttons that can prompt the LSG to revise summaries based on the preferences of the instructor and needs of the student's families. 
+1. Adding calendar widgets to date settings.    
 
 ## Links to documentation for Stretch Goals: 
 1. OAuth: https://django-oauth-toolkit.readthedocs.io/en/latest/getting_started.html 
