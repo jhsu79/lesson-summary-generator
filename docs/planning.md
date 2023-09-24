@@ -14,8 +14,6 @@
 <img width="500" alt="Screenshot 2023-09-23 at 11 38 22 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/eedc0658-54e5-4398-9507-354e273e1b95">
 <img width="500" alt="Screenshot 2023-09-23 at 11 38 52 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/0cf27143-4e91-4282-8fd3-3c80d935f124">
 <img width="500" alt="Screenshot 2023-09-23 at 11 39 02 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/9961cfc0-6ab9-463f-93aa-dfbf6f3bc073">
-<img width="500" alt="Screenshot 2023-09-23 at 11 38 22 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/186311cc-a99a-446e-97d8-511a7e4e170f">
-<img width="500" alt="Screenshot 2023-09-23 at 11 38 22 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/f8697dbf-d6f5-4346-894f-94af04e9f87d"><img width="517" alt="Screenshot 2023-09-23 at 11 39 09 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/98ca8240-d741-4384-a099-81de69a7a6ee">
 <img width="500" alt="Screenshot 2023-09-23 at 11 38 32 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d79a9f0e-0891-4670-b2c0-fb0e10fedad9">
 
 
