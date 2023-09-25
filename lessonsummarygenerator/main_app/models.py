@@ -21,4 +21,4 @@ class Student(models.Model):
     last_name = models.CharField(max_length=50, blank = False)
     program_type= models.CharField(max_length=1, choices=[(choice.value, choice.name) for choice in PROGRAM_CHOICES], )  
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'student_id': self.id})
+        return reverse('student_detail', kwargs={'student_id': self.id})

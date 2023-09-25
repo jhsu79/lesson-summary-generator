@@ -33,16 +33,16 @@ def students_index(request):
     students = Student.objects.all().order_by('last_name')
     return render(request, 'students/index.html', {'students':students})
 
-def student_detail (request, Student_id):  
-    Student = Student.objects.get(id=Student_id) 
-    return render(request, 'students/detail.html', {'Student': Student} )
+def student_detail (request, student_id):  
+    student = Student.objects.get(id=student_id) 
+    return render(request, 'students/detail.html', {'Student': student} )
 
 class StudentCreate(CreateView): 
-    model = Student 
+    model = Student
     fields = '__all__'
 
 class StudentUpdate(UpdateView):
-    model = Student 
+    model = Student
     fields = '__all__'
  
 class StudentDelete(DeleteView):
