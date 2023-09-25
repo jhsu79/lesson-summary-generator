@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView, UpdateView, DeleteView
-from .models import Concept
+from .models import Concept, Student
 # Create your views here.
 
 class HomeView(TemplateView):
@@ -28,3 +28,23 @@ class ConceptUpdate(UpdateView):
 class ConceptDelete(DeleteView):
       model = Concept
       success_url = '/concepts'
+
+def students_index(request): 
+    students = Student.objects.all().order_by('name')
+    return render(request, students/index.html, {'students':students})
+
+def Student_detail (request, Student_id):  
+    Student = Student.objects.get(id=Student_id) 
+    return render(request, students/detail.html, {'Student': Student} )
+
+class StudentCreate(CreateView): 
+    model = Student 
+    fields = '__all__'
+
+class StudentUpdate(UpdateView):
+    model = Student 
+    fields = '__all__'
+ 
+class StudentDelete(DeleteView):
+      model = Student
+      success_url = '/students'

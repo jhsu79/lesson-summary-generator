@@ -4,8 +4,8 @@
   <div>
     <h1>Concept Details</h1>
     <div>
-        <a href="{% url 'concept_update' concept.id %}">Edit</a>
-        <a href="{% url 'concept_delete' concept.id %}">Delete</a>
+        <button href="{% url 'concept_update' concept.id %}" value="Edit">Edit this concept</button>
+        <button href="{% url 'concept_delete' concept.id %}" value="Delete">Delete this concept</button>
       </div>
   </div>
   <div>
