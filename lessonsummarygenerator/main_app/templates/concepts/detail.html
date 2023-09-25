@@ -3,6 +3,10 @@
 <div>
   <div>
     <h1>Concept Details</h1>
+    <div>
+        <a href="{% url 'concept_update' concept.id %}">Edit</a>
+        <a href="{% url 'concept_delete' concept.id %}">Delete</a>
+      </div>
   </div>
   <div>
     <div>

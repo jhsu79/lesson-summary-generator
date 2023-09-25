@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Delete Concept</h1>
+
+  <h4>Are you sure you want to delete this concept? This cannot be undone. </h4>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <button type="submit" value="Yes">Yes, I want to delete this concept.</button>
+    <button href="{% url 'detail' concept.id %}" value="No">Nevermind, I want to keep this concept. </button>
+  </form>
+{% endblock %}
+
+<!-- <input type="submit" value="Yes, I want to delete." class="btn"> -->

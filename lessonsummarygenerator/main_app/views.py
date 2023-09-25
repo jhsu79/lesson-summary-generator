@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import TemplateView, CreateView, UpdateView, DeleteView
 from .models import Concept
 # Create your views here.
 
@@ -20,3 +20,11 @@ def concept_detail (request, concept_id):
 class ConceptCreate(CreateView): 
     model = Concept 
     fields = '__all__'
+
+class ConceptUpdate(UpdateView):
+    model = Concept 
+    fields = '__all__'
+ 
+class ConceptDelete(DeleteView):
+      model = Concept
+      success_url = '/concepts'
