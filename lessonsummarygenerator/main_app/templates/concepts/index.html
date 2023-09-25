@@ -2,7 +2,7 @@
 {% block content %}
 <h2> Your Concepts</h2> 
 {% for concept in concepts %}
-<a href="/concepts/{{concept.id}}">
+<a href="{% url 'detail' concept.id %}">
 <div>{{concept.name}}</div>
 </a>
 {% endfor %} 

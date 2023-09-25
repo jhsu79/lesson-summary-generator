@@ -8,4 +8,6 @@ urlpatterns = [
     path('about/', AboutView.as_view(), name= 'about'),
     path('concepts/', views.concepts_index, name='concepts_index'),
     path('concepts/<int:concept_id>/', views.concept_detail, name='detail'),   
+    path('concepts/create/', views.ConceptCreate.as_view(), name='concepts_create'),
+
  ]

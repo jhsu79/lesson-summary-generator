@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<div>
+  <div>
+    <h1>Concept Details</h1>
+  </div>
+  <div>
+    <div>
+        <h3>Concept Name:</h3>
+        <p>{{concept.name}}</p>
+    </div>
+    <div>
+        <h3>Description:</h3>
+        <p>{{concept.description}}</p>
+    </div>
+    <div>
+        <h3>Keywords:</h3>
+        <p>{% for keyword in concept.keywords %} <ul><li>{{ keyword }}</li></ul> {% endfor %}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
