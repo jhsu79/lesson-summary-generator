@@ -90,34 +90,34 @@
 [Lesson Summary Generator Routes](https://docs.google.com/spreadsheets/d/1J8kdKBCMRNBt6ToQFSdZv2q6IDWnzzFOg8Q9sNNe7yA/edit#gid=1241829581)
 
 ## User Stories: 
-There are four layers to the stories: concepts, students, lesson notes, 
+There are four layers to the stories: concepts, students, lesson notes, and lesson summaries. 
 
 #### (A) Concepts
-- As a user, I want to be able to add a concept (alongside a description of that concept) to a list that I will later reference in my lesson notes.  
-- As a user, I want to be able to edit the title or description of that concept or delete the concept (and any associated content), 
+- As a user, I want to be able to add a concept (alongside a description of that concept) to a list that I will later reference in my lesson notes. 
+- As a user, I want to be able to edit the title or description of that concept or delete the concept (and any associated content). 
 
 #### (B) Students
-- As a user(AAU), I want to be able to add a student to my student list. 
-- AAU, I want to edit the students details.  
-- AAU, I want to view a list of all my students students. 
-- AAU, I want to view the details of a specific student and any lesson summaries associated with that student.  
+- As a user(AAU), I want to be able to add a student to my student list
+- AAU, I want to edit the students details.
+- AAU, I want to view a list of all my students.
+- AAU, I want to view the details of a specific student and any lesson summaries associated with that student.
 
 #### (C) Lesson Notes 
-- AAU, I want to to view a form where I can quickly summarize my impressions of a lesson, including a student's performance on homework, the concepts covered during the lesson, and the student's assignments for the next lesson.  
-- AAU, I want to be able to save and edit that form. 
+- AAU, I want to to view a form where I can quickly summarize my impressions of a lesson, including a student's performance on homework, the concepts covered during the lesson, and the student's assignments for the next lesson. 
+- AAU, I want to be able to save and edit that form.
 
 #### (D) Lesson Summaries 
-- AAU, I want to be able to use the saved note to generate a three-paragraph summary, highlighting the student's homework performance, the concepts covered, and assignments.  
+- AAU, I want to be able to use the saved note to generate a three-paragraph summary, highlighting the student's homework performance, the concepts covered, and assignments.
 - AAU, I want to save that content to the student's page.
 - AAU, I want to be able to edit and update that summary. 
-- AAU, I want to be able to delete both the lesson summary and corresponding lesson note. 
+- AAU, I want to be able to delete both the lesson summary and corresponding lesson note.
 
 ## Stretch Goals: 
 1. OAuth that allows for multiple instructors 
-2. Adding Subtopics with their own distinct keywords for Concepts. 
-3. Refactor template components into React. 
-1. Adding grammar, tone and style buttons that can prompt the LSG to revise summaries based on the preferences of the instructor and needs of the student's families. 
-1. Adding calendar widgets to date settings.    
+2. Adding Subtopics with their own distinct keywords for Concepts
+3. Refactor template components into React
+1. Adding grammar, tone and style buttons that can prompt the LSG to revise summaries based on the preferences of the instructor and needs of the student's families
+1. Adding calendar widgets to date settings   
 
 ## Links to documentation for Stretch Goals: 
 1. [OAuth](https://django-oauth-toolkit.readthedocs.io/en/latest/getting_started.html) 
