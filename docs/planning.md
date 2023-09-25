@@ -7,6 +7,10 @@
 1. Django 
 1. OpenAI 
 
+## Project Planning Overview  
+[Link to Trello Board](https://trello.com/b/tR8FyzeN/lesson-summary-generator)
+
+
 ## Wireframes: 
 <img width="500" alt="Screenshot 2023-09-23 at 11 46 33 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/9244c54c-563e-4616-a74d-7d8f0bc9dec2">
 <br>
@@ -83,7 +87,7 @@
 ![Lesson Note Generator ERD](https://github.com/jhsu79/lesson-note-generator/assets/137417888/5086882a-21ac-42d9-aebb-def899ce355a)
 
 ## Routes
-[Lesson Summary Geneator Routes Tables](https://docs.google.com/spreadsheets/d/1J8kdKBCMRNBt6ToQFSdZv2q6IDWnzzFOg8Q9sNNe7yA/edit#gid=1241829581)
+[Lesson Summary Generator Routes](https://docs.google.com/spreadsheets/d/1J8kdKBCMRNBt6ToQFSdZv2q6IDWnzzFOg8Q9sNNe7yA/edit#gid=1241829581)
 
 ## User Stories: 
 There are four layers to the stories: concepts, students, lesson notes, 
