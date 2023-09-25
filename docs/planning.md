@@ -18,12 +18,12 @@
 <img width="500" alt="Screenshot 2023-09-23 at 11 39 09 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d6679e53-4460-40e6-9323-7188197aa601">
 
 
-Link to Wireframes: https://lucid.app/lucidspark/db9dd6dc-0323-49a8-9144-aee51fee253f/edit?page=0_0&invitationId=inv_9f52bceb-7de6-4005-bc8d-0ad7ce572c8a#
+[Link to Wireframes](https://lucid.app/lucidspark/db9dd6dc-0323-49a8-9144-aee51fee253f/edit?page=0_0&invitationId=inv_9f52bceb-7de6-4005-bc8d-0ad7ce572c8a#)
 
 ## Relevant Links: 
-Link to GitHub Repo: https://github.com/jhsu79/lesson-note-generator
+[Link to GitHub Repo](https://github.com/jhsu79/lesson-note-generator)
 
-Link to API Documentation: https://platform.openai.com/docs/api-reference
+[Link to OpenAI API Documentation](https://platform.openai.com/docs/api-reference)
 
 ## Models
 | Instructor    | Type Of Data  |
@@ -80,10 +80,11 @@ Link to API Documentation: https://platform.openai.com/docs/api-reference
 
 
 ## Basic ERD:  
-![Lesson Note Generator](https://github.com/jhsu79/lesson-note-generator/assets/137417888/5086882a-21ac-42d9-aebb-def899ce355a)
+![Lesson Note Generator ERD](https://github.com/jhsu79/lesson-note-generator/assets/137417888/5086882a-21ac-42d9-aebb-def899ce355a)
 
 ## Routes
-https://docs.google.com/spreadsheets/d/1J8kdKBCMRNBt6ToQFSdZv2q6IDWnzzFOg8Q9sNNe7yA/edit#gid=1241829581
+[Lesson Summary Geneator Routes Tables](https://docs.google.com/spreadsheets/d/1J8kdKBCMRNBt6ToQFSdZv2q6IDWnzzFOg8Q9sNNe7yA/edit#gid=1241829581)
+
 ## User Stories: 
 There are four layers to the stories: concepts, students, lesson notes, 
 
@@ -115,5 +116,5 @@ There are four layers to the stories: concepts, students, lesson notes,
 1. Adding calendar widgets to date settings.    
 
 ## Links to documentation for Stretch Goals: 
-1. OAuth: https://django-oauth-toolkit.readthedocs.io/en/latest/getting_started.html 
-2. Calendar Widgets: https://forum.djangoproject.com/t/how-to-set-data-calendar-widget-for-datefield-and-datetimefield-with-format-day-month-year-dd-mm-yyyy/7243
+1. [OAuth](https://django-oauth-toolkit.readthedocs.io/en/latest/getting_started.html) 
+2. [Calendar Widgets](https://forum.djangoproject.com/t/how-to-set-data-calendar-widget-for-datefield-and-datetimefield-with-format-day-month-year-dd-mm-yyyy/7243)
