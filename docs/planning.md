@@ -80,12 +80,10 @@ Link to API Documentation: https://platform.openai.com/docs/api-reference
 
 
 ## Basic ERD:  
-![Lesson Note Generator (1)](https://github.com/jhsu79/lesson-note-generator/assets/137417888/5086882a-21ac-42d9-aebb-def899ce355a)
+![Lesson Note Generator](https://github.com/jhsu79/lesson-note-generator/assets/137417888/5086882a-21ac-42d9-aebb-def899ce355a)
 
 ## Routes
-[Lesson Note Generator Project Planning - Google Sheets copy.pdf](https://github.com/jhsu79/lesson-note-generator/files/12711092/Lesson.Note.Generator.Project.Planning.-.Google.Sheets.copy.pdf)
-
-
+https://docs.google.com/spreadsheets/d/1J8kdKBCMRNBt6ToQFSdZv2q6IDWnzzFOg8Q9sNNe7yA/edit#gid=1241829581
 ## User Stories: 
 There are four layers to the stories: concepts, students, lesson notes, 
 
