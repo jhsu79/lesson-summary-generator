@@ -30,12 +30,12 @@ class ConceptDelete(DeleteView):
       success_url = '/concepts'
 
 def students_index(request): 
-    students = Student.objects.all().order_by('name')
-    return render(request, students/index.html, {'students':students})
+    students = Student.objects.all().order_by('last_name')
+    return render(request, 'students/index.html', {'students':students})
 
-def Student_detail (request, Student_id):  
+def student_detail (request, Student_id):  
     Student = Student.objects.get(id=Student_id) 
-    return render(request, students/detail.html, {'Student': Student} )
+    return render(request, 'students/detail.html', {'Student': Student} )
 
 class StudentCreate(CreateView): 
     model = Student 
