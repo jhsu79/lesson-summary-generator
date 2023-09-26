@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import TemplateView, CreateView, UpdateView, DeleteView
 from .models import Concept, Student, LessonNote
 # from .forms import LessonNoteForm
@@ -34,10 +34,10 @@ def students_index(request):
     students = Student.objects.all().order_by('last_name')
     return render(request, 'students/index.html', {'students':students})
 
-def student_detail (request, student_id):  
-    student = Student.objects.get(id=student_id) 
-    # lesson_notes = LessonNote.objects.filter(student=student)
-    return render(request, 'students/detail.html', {'Student': student})
+def student_detail(request, student_id):
+    student = get_object_or_404(Student, id=student_id)
+    lesson_notes = LessonNote.objects.filter(student=student)
+    return render(request, 'students/detail.html', {'Student': student, 'lesson_notes': lesson_notes})
 
 class StudentCreate(CreateView): 
     model = Student
@@ -51,10 +51,7 @@ class StudentDelete(DeleteView):
       model = Student
       success_url = '/students'
 
-# def lesson_note_detail (request, lesson_note_id):
-#     lesson_note = 
-# def add_lesson_note(request, student_id): 
-#     form = LessonNoteForm(request.POST)
-#     new_lesson = form.save(commit=False)
-#     new_lesson.student_id = student_id
-    
+def lesson_note_detail(request, lesson_note_id, student_id):
+    lesson_note = LessonNote.objects.get(id=lesson_note_id)
+    student = get_object_or_404(Student, id=student_id)
+    return render(request, 'students/lesson_note.html', {'Student': student,'lesson_note' : lesson_note})

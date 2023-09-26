@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% block content %}
+<div>
+  <h3> {{Student.first_name}} {{Student.last_name}}</h3>
+</div>
+<div>  
+  <p>Lesson Note for <strong>{{lesson_note.date}}</strong></h3>
+  <p>How much of the homework did the student complete?</p>
+  <p>How well did the student perform?</p>
+  <p>Any notes you want to add about the homework? <strong>{{lesson_note.homework_notes}}</strong></p>
+  <p>What concepts did you cover in the lesson today? 
+    {% for concept in lesson_note.concepts_covered.all %}
+     <strong>{{ concept.name }}, </strong> 
+        {% endfor %}</p>
+  <p>Is there homework assigned today? 
+      {% if lesson_note.homework_assigned == True %}
+        <strong>Yes</strong>
+      {% else %}
+        <strong>No</strong>
+      {% endif %}
+  </p>
+  <p>What is the assigned homework? 
+    {% if lesson_note.homework_assigned == True %} 
+    <strong>{{lesson_note.assigned_homework}}</strong>
+    {% endif %}   
+  </p>
+  <p>When is the next lesson? <strong>{{lesson_note.next_lesson_date}}</strong></p>
+  <p>Private Notes: <strong>{{lesson_note.private_notes}}</strong></p>
+</div>
+
+<div>
+  <h3>Lesson Summary</h3>
+  <div>{{lesson_note.lesson_summary}}</div></div>
+
+{% endblock %} 

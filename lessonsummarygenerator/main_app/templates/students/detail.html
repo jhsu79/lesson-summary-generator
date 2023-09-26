@@ -7,6 +7,7 @@
     <div>
        <button><a href="{% url 'student_update' Student.id %}" value="Edit">Edit this</a></button>
        <button><a href="{% url 'student_delete' Student.id %}" value="Delete"> Delete this</a></button>
+       <button><a value="Enter a new lesson note">Enter a new lesson note</a></button>
       </div>
   </div>
   <div>
@@ -26,6 +27,7 @@
     <ul>
         {% for lesson_note in lesson_notes %}
             <li>{{ lesson_note.lesson_summary|safe }}</li>
+            <button><a href="{% url 'lesson_note_detail' Student.id lesson_note.id %}">Edit/View the lesson note</a></button>
         {% endfor %} 
     </ul>
   </div>

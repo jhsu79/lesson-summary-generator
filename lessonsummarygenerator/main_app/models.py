@@ -47,4 +47,5 @@ class LessonNote(models.Model):
     lesson_summary = models.TextField(max_length=500, blank=False)
 
     def __str__(self):
-        return f"Lesson Note for {self.date}"
+        concepts = ", ".join(concept.name for concept in self.concepts_covered.all())
+        return f"Lesson Note for {self.date}, Concepts Covered: {concepts}"
