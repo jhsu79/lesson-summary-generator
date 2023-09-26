@@ -16,7 +16,8 @@ class Concept(models.Model):
     name = models.CharField(max_length=100, blank=False)
     description = models.TextField(max_length=250, blank=False)
     keywords = ArrayField(models.CharField(max_length=100), blank=True)
-
+    def __str__(self): 
+        return f"{self.name}"
     def get_absolute_url(self):
         return reverse("detail", kwargs={"concept_id": self.id})
 
@@ -29,12 +30,14 @@ class Student(models.Model):
         max_length=15,
         choices=[(choice.value, choice.name) for choice in PROGRAM_CHOICES],
     )
-
+    def __str__(self): 
+        return f"{self.first_name} {self.last_name}"
     def get_absolute_url(self):
         return reverse("student_detail", kwargs={"student_id": self.id})
 
 
 class LessonNote(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     date = models.DateField("Lesson Date")
     homework_notes = models.CharField(max_length=100, blank=False)
     concepts_covered = models.ManyToManyField(Concept, blank=True)
@@ -43,9 +46,11 @@ class LessonNote(models.Model):
     assigned_homework = models.TextField(max_length=250, blank=False)
     next_lesson_date = models.DateField("Next Lesson Date")
     private_notes = models.TextField(blank=False)
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    lesson_summary = models.TextField(max_length=500, blank=False)
+    lesson_summary = models.TextField(max_length=500, blank=True)
 
     def __str__(self):
         concepts = ", ".join(concept.name for concept in self.concepts_covered.all())
-        return f"Lesson Note for {self.date}, Concepts Covered: {concepts}"
+        student_name = f"{self.student.first_name} {self.student.last_name}"
+        return f"Lesson Note for Student: {student_name} on {self.date}. Concepts Covered: {concepts}"
+    def get_absolute_url(self):
+        return reverse("lesson_note_detail", kwargs={"student_id": self.student.id, "lesson_note_id": self.id})

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div><h3>Enter your lesson notes</h3>
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Save lesson Note" class="btn">
+
+  </form>
+</div>
+{% endblock %} 
