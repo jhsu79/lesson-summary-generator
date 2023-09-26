@@ -4,7 +4,10 @@
 <div><h3>Add a Student</h3>
 <form action="" method="POST">
     {% csrf_token %}
-      {{ form.as_p }}
+    <table>
+      {{ form.as_table }}
+
+    </table>
     <input type="submit" value="Save Student" class="btn">
   </form>
 </div>

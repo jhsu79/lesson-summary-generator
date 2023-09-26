@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, CreateView, UpdateView, DeleteView
-from .models import Concept, Student
+from .models import Concept, Student, LessonNote
+# from .forms import LessonNoteForm
 # Create your views here.
 
 class HomeView(TemplateView):
@@ -35,7 +36,8 @@ def students_index(request):
 
 def student_detail (request, student_id):  
     student = Student.objects.get(id=student_id) 
-    return render(request, 'students/detail.html', {'Student': student} )
+    # lesson_notes = LessonNote.objects.filter(student=student)
+    return render(request, 'students/detail.html', {'Student': student})
 
 class StudentCreate(CreateView): 
     model = Student
@@ -48,3 +50,11 @@ class StudentUpdate(UpdateView):
 class StudentDelete(DeleteView):
       model = Student
       success_url = '/students'
+
+# def lesson_note_detail (request, lesson_note_id):
+#     lesson_note = 
+# def add_lesson_note(request, student_id): 
+#     form = LessonNoteForm(request.POST)
+#     new_lesson = form.save(commit=False)
+#     new_lesson.student_id = student_id
+    
