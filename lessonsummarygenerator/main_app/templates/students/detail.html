@@ -4,18 +4,22 @@
   <div>
     <h1>Student Details</h1>
     <div>
-        <button href="{% url 'student_update' Student.id %}" value="Edit">Edit this student</button>
-        <button href="{% url 'student_delete' Student.id %}" value="Delete">Delete this student</button>
+       <button><a href="{% url 'student_update' Student.id %}" value="Edit">Edit this</a></button>
+       <button><a href="{% url 'student_delete' Student.id %}" value="Delete"> Delete this</a></button>
       </div>
   </div>
   <div>
     <div>
-        <h3></h3> Student Name:</h3>
-        <p>{{student.first_name}}{{student.last_name}}</p>
+        <h3>Student Name:</h3>
+        <p>{{Student.first_name}} {{Student.last_name}}</p>
     </div>
     <div>
+      <h3>Pronouns:</h3>
+      <p>{{ Student.pronouns}}</p>
+  </div>
+    <div>
         <h3>Program Type:</h3>
-        <p>{{ student.program_type}}</p>
+        <p>{{ Student.program_type}}</p>
     </div>
   </div>
 </div>

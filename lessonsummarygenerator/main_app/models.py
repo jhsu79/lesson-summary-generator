@@ -4,9 +4,10 @@ from django.contrib.postgres.fields import ArrayField
 from enum import Enum, auto
 
 class PROGRAM_CHOICES(Enum):
-    ONE_ON_ONE = '1' 
-    SMALL_GROUP= 'S'
-    CLASSROOM = 'C'
+    TUTORING = '1-on-1'
+    GROUP = 'Small Group' 
+    CLASS = 'Classroom'
+    
 
 # Create your models here.
 class Concept(models.Model):
@@ -19,6 +20,7 @@ class Concept(models.Model):
 class Student(models.Model):
     first_name = models.CharField(max_length=50, blank = False)
     last_name = models.CharField(max_length=50, blank = False)
-    program_type= models.CharField(max_length=1, choices=[(choice.value, choice.name) for choice in PROGRAM_CHOICES], )  
+    pronouns = models.CharField(blank = False)
+    program_type= models.CharField(max_length=15, choices=[(choice.value, choice.name) for choice in PROGRAM_CHOICES], )  
     def get_absolute_url(self):
         return reverse('student_detail', kwargs={'student_id': self.id})
