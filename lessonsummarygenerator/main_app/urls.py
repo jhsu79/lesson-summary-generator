@@ -20,6 +20,11 @@ urlpatterns = [
     path('students/<int:student_id>/lessons/create', views.LessonNoteCreate.as_view(), name='lesson_note_create'),
     path('students/<int:student_id>/lessons/<int:pk>/update/', views.LessonNoteUpdate.as_view(), name='lessonnoteupdate'),
     path('students/<int:student_id>/lessons/<int:pk>/delete/', views.LessonNoteDelete.as_view(), name='lessonnotedelete'),
+
+
+
+
+
 ]    
 
  
