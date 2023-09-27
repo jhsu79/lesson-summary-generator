@@ -5,11 +5,16 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Concept, Student, LessonNote
 from .forms import LessonNoteForm
 from django.contrib.auth.decorators import login_required
+from dotenv import load_dotenv
 from django.contrib.auth.mixins import LoginRequiredMixin
 import openai, os
+load_dotenv()
+
 
 # from .forms import LessonNoteForm
 # Create your views here.
+chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+openai.api_key= os.getenv('OPEN_AI_KEY')
 
 class HomeView(TemplateView):
     template_name = 'home.html'
@@ -76,11 +81,12 @@ def summarize_lesson_note(lesson_note_text):
         openai.api_key= os.getenv('OPEN_AI_KEY')
         prompt = lesson_note_text 
         response = openai.Completion.create(
-            model="text-davinci-003",
+            model="gpt-3.5-turbo",
             prompt=prompt,
             temperature=0.6,
         )
-        summary = response.choice[0].text
+        print ('')
+        summary = response.choices[0].message.content
         return summary
 
 
@@ -89,11 +95,21 @@ class LessonNoteCreate(LoginRequiredMixin,CreateView):
     form_class = LessonNoteForm
     template_name = 'main_app/lessonnote_form.html'
 
-    def get_form(self, form):
+    def get_form(self, form_class=None):
+        form = super().get_form(form_class)   
+        # Get the current student
+        student_id = self.kwargs['student_id']
+        student = get_object_or_404(Student, id=student_id)       
+        # Set the student for the form
+        form.instance.student = student        
+        # Restrict the queryset of the 'student' field to the current student
+        form.fields['student'].queryset = Student.objects.filter(id=student.id)
+        return form
+
+    def form_valid(self, form):
         student_id = self.kwargs['student_id']
         student = get_object_or_404(Student, id=student_id)       
         form.instance.student = student        
-        form.fields['student'].queryset = Student.objects.filter(id=student.id)
         response = super().form_valid(form)
 
         ##Create form cleaned fields. 
