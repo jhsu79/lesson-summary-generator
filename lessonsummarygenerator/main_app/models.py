@@ -59,7 +59,7 @@ class LessonNote(models.Model):
     assigned_homework = models.TextField(max_length=250, blank=False)
     next_lesson_date = models.DateField("Next Lesson Date")
     private_notes = models.TextField(blank=False)
-    lesson_summary = models.TextField(max_length=500, blank=True)
+    lesson_summary = models.TextField(blank=True)
 
     def __str__(self):
         concepts = ", ".join(concept.name for concept in self.concepts_covered.all())

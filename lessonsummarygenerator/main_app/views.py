@@ -71,21 +71,35 @@ def lesson_note_detail(request, lesson_note_id, student_id):
     student = get_object_or_404(Student, id=student_id)
     return render(request, 'students/lesson_note.html', {'Student': student,'lesson_note' : lesson_note})
 
+
+def summarize_lesson_note(lesson_note_text):
+        openai.api_key= os.getenv('OPEN_AI_KEY')
+        prompt = lesson_note_text 
+        response = openai.Completion.create(
+            model="text-davinci-003",
+            prompt=prompt,
+            temperature=0.6,
+        )
+        summary = response.choice[0].text
+        return summary
+
+
 class LessonNoteCreate(LoginRequiredMixin,CreateView): 
     model = LessonNote 
     form_class = LessonNoteForm
     template_name = 'main_app/lessonnote_form.html'
 
-    def get_form(self, form_class=None):
-        form = super().get_form(form_class)   
-        # Get the current student
+    def get_form(self, form):
         student_id = self.kwargs['student_id']
         student = get_object_or_404(Student, id=student_id)       
-        # Set the student for the form
         form.instance.student = student        
-        # Restrict the queryset of the 'student' field to the current student
         form.fields['student'].queryset = Student.objects.filter(id=student.id)
-        return form
+        response = super().form_valid(form)
+        lesson_note_text = form.cleaned_data['']
+        summary = summarize_lesson_note(lesson_note_text)
+        self.object.lesson_summary = summary
+        self.object.save()
+        return response
 
 class LessonNoteUpdate(LoginRequiredMixin,UpdateView): 
     model = LessonNote 
@@ -121,45 +135,11 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
-# def lesson_summary_generator(request, lesson_note_id, student_id):
-#     lesson_note = LessonNote.objects.get(id=lesson_note_id)
-#     student = get_object_or_404(Student, id=student_id)
-#     if request.method == 'POST': 
-#         form = LessonNoteForm(request.POST)
-#         if form.is_valid(): 
-#             student = form.cleaned_data['student']
-#             homework_completion_level = form.cleaned_data['homework_completion level']
-#             homework_accuracy_level = form.cleaned_data['homework_accuracy level']
-#             homework_review_comments = form.cleaned_data['homework_review_comments']           
-#             concepts_covered = form.cleaned_data['concepts_covered']
-#             lesson_comments = form.cleaned_data['lesson_comments']
-#             assigned_homework = form.cleaned_data['lesson_comments']
-#             next_lesson_date = form.cleaned_data['next_lesson_date']
-
-#             prompt = f"Create a 4 paragraph summary that references the {student}'s name following structure:"
-#             prompt += f"1st paragraph: Summarize the {homework_accuracy_level}, and {homework_completion_level} {homework_review_comments}"
-#             prompt += f"2nd paragraph: Summarize the {concepts_covered}, and {lesson_comments}"
-#             prompt += f"3rd paragraph: Create an ordered list from the {assigned_homework}"
-#             prompt += f"4th paragraph: State the {next_lesson_date}"
-#             temperature = 0.6
-
-#             api_key= os.getenv('SECRET_KEY')
-
-#             response = request.post(
-#                 'https://api.openai.com/v1/engines/davinci-codex/completions',
-#                 headers={'Authorization': f'Bearer {api_key}'},
-#                 json={'prompt': prompt, 'max_tokens': 1000}  # Adjust max_tokens as needed
-#             )
-        
-#             if response.status_code == 200:
-#                 data = response.json()
-#                 generated_summary = data['choices'][0]['text']
-#                 return render(request, 'students/lesson_note.html', {'Student': student,'lesson_note' : lesson_note, 'form': form, 'generated_summary': generated_summary})
-
-#             else:
-#                 form = LessonNoteForm()
-#                 return render(request, 'students/lesson_note.html', {'Student': student,'lesson_note' : lesson_note, 'form': form})
 
 
-
+             prompt = f"Create a 4 paragraph summary that references the {student}'s name following structure:"
+             prompt += f"1st paragraph: Summarize the {homework_accuracy_level}, and {homework_completion_level} {homework_review_comments}"
+             prompt += f"2nd paragraph: Summarize the {concepts_covered}, and {lesson_comments}"
+             prompt += f"3rd paragraph: Create an ordered list from the {assigned_homework}"
+             prompt += f"4th paragraph: State the {next_lesson_date}"
             
