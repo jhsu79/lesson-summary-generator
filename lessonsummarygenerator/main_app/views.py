@@ -6,7 +6,7 @@ from .models import Concept, Student, LessonNote
 from .forms import LessonNoteForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-import openai
+import openai, os
 
 # from .forms import LessonNoteForm
 # Create your views here.
@@ -121,12 +121,45 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
-# def lesson_summary_generator():
-#     if request.method == 'POST': 
-#         form = LessonNoteForm(request.POST)
-#         if form.is_valid(): 
-#             student = form.cleaned_data['student']
-#             homework_notes = form.cleaned_data['student']
-#             concepts_covered = form.cleaned_data['student']
-#             lesson_comments = form.cleaned_data['student']
-#             assigned_homework = form.cleaned_data['student']
+def lesson_summary_generator(request, lesson_note_id, student_id):
+    lesson_note = LessonNote.objects.get(id=lesson_note_id)
+    student = get_object_or_404(Student, id=student_id)
+    if request.method == 'POST': 
+        form = LessonNoteForm(request.POST)
+        if form.is_valid(): 
+            student = form.cleaned_data['student']
+            homework_completion_level = form.cleaned_data['homework_completion level']
+            homework_accuracy_level = form.cleaned_data['homework_accuracy level']
+            homework_review_comments = form.cleaned_data['homework_review_comments']           
+            concepts_covered = form.cleaned_data['concepts_covered']
+            lesson_comments = form.cleaned_data['lesson_comments']
+            assigned_homework = form.cleaned_data['lesson_comments']
+            next_lesson_date = form.cleaned_data['next_lesson_date']
+
+            prompt = f"Create a 4 paragraph summary that references the {student}'s name following structure:"
+            prompt += f"1st paragraph: Summarize the {homework_accuracy_level}, and {homework_completion_level} {homework_review_comments}"
+            prompt += f"2nd paragraph: Summarize the {concepts_covered}, and {lesson_comments}"
+            prompt += f"3rd paragraph: Create an ordered list from the {assigned_homework}"
+            prompt += f"4th paragraph: State the {next_lesson_date}"
+            temperature = 0.6
+
+            api_key= os.getenv('SECRET_KEY')
+
+            response = request.post(
+                'https://api.openai.com/v1/engines/davinci-codex/completions',
+                headers={'Authorization': f'Bearer {api_key}'},
+                json={'prompt': prompt, 'max_tokens': 1000}  # Adjust max_tokens as needed
+            )
+        
+            if response.status_code == 200:
+                data = response.json()
+                generated_summary = data['choices'][0]['text']
+                return render(request, 'students/lesson_note.html', {'Student': student,'lesson_note' : lesson_note, 'form': form, 'generated_summary': generated_summary})
+
+            else:
+                form = LessonNoteForm()
+                return render(request, 'students/lesson_note.html', {'Student': student,'lesson_note' : lesson_note, 'form': form})
+
+
+
+            
