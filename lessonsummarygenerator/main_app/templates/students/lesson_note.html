@@ -34,8 +34,8 @@
 </div>
 <div>
   <h3>Lesson Summary</h3>
-  {% if generated_summary %}
+  {% if lesson_note.lesson_summary %}
   <h2>Summary for {{Student.first_name}} for lesson on {{lesson_note.date}}</h2>
-  <div>{{generated_summary}}</div></div>
+  <div>{{lesson_note.lesson_summary}}</div></div>
   {% endif %}
 {% endblock %} 

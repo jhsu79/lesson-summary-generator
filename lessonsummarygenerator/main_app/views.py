@@ -95,7 +95,18 @@ class LessonNoteCreate(LoginRequiredMixin,CreateView):
         form.instance.student = student        
         form.fields['student'].queryset = Student.objects.filter(id=student.id)
         response = super().form_valid(form)
-        lesson_note_text = form.cleaned_data['']
+
+        ##Create form cleaned fields. 
+        homework_accuracy_level = form.cleaned_data['homework_accuracy_level']
+        homework_completion_level = form.cleaned_data['homework_completion_level']
+        homework_review_comments = form.cleaned_data['homework_review_comments']
+        concepts_covered = form.cleaned_data['concepts_covered']
+        lesson_comments = form.cleaned_data['lesson_comments']
+        assigned_homework = form.cleaned_data['assigned_homework']
+        next_lesson_date = form.cleaned_data['next_lesson_date']
+
+        lesson_note_text =  f"Create a four paragraph summary that references the {student}'s name following structure: the first paragraph summarizes the {homework_accuracy_level}, and {homework_completion_level} {homework_review_comments}, the second paragraph summarizes the {concepts_covered} and {lesson_comments}, the third paragraph creates an ordered list from the {assigned_homework}, and the 4th paragraph states the {next_lesson_date}"
+
         summary = summarize_lesson_note(lesson_note_text)
         self.object.lesson_summary = summary
         self.object.save()
@@ -135,11 +146,3 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
-
-
-             prompt = f"Create a 4 paragraph summary that references the {student}'s name following structure:"
-             prompt += f"1st paragraph: Summarize the {homework_accuracy_level}, and {homework_completion_level} {homework_review_comments}"
-             prompt += f"2nd paragraph: Summarize the {concepts_covered}, and {lesson_comments}"
-             prompt += f"3rd paragraph: Create an ordered list from the {assigned_homework}"
-             prompt += f"4th paragraph: State the {next_lesson_date}"
-            
