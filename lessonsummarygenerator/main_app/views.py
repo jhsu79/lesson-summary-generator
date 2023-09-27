@@ -6,6 +6,7 @@ from .models import Concept, Student, LessonNote
 from .forms import LessonNoteForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+import openai
 
 # from .forms import LessonNoteForm
 # Create your views here.
@@ -119,3 +120,13 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
+
+# def lesson_summary_generator():
+#     if request.method == 'POST': 
+#         form = LessonNoteForm(request.POST)
+#         if form.is_valid(): 
+#             student = form.cleaned_data['student']
+#             homework_notes = form.cleaned_data['student']
+#             concepts_covered = form.cleaned_data['student']
+#             lesson_comments = form.cleaned_data['student']
+#             assigned_homework = form.cleaned_data['student']

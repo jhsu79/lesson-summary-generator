@@ -6,9 +6,9 @@
 </div>
 <div>  
   <p>Lesson Note for <strong>{{lesson_note.date}}</strong></h3>
-  <p>How much of the homework did the student complete?</p>
-  <p>How well did the student perform?</p>
-  <p>Any notes you want to add about the homework? <strong>{{lesson_note.homework_notes}}</strong></p>
+  <p>How much of the homework did the student complete? <strong>{{lesson_note.homework_completion_level}}</strong></p>
+  <p>How well did the student perform on the homework? Enter your answer as a percentage, e.g. '70%' <strong>{{lesson_note.homework_accuracy_level}}<strong></p>
+  <p>Any notes you want to add about the homework from last session? <strong>{{lesson_note.homework_notes}}</strong></p>
   <p>What concepts did you cover in the lesson today? 
     {% for concept in lesson_note.concepts_covered.all %}
      <strong>{{ concept.name }}, </strong> 
