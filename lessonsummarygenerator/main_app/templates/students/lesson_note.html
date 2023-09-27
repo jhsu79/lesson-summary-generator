@@ -1,5 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
+
 <div>
   <h3> {{Student.first_name}} {{Student.last_name}}</h3>
 </div>
@@ -11,7 +12,7 @@
   <p>What concepts did you cover in the lesson today? 
     {% for concept in lesson_note.concepts_covered.all %}
      <strong>{{ concept.name }}, </strong> 
-        {% endfor %}</p>
+    {% endfor %}</p>
   <p>Is there homework assigned today? 
       {% if lesson_note.homework_assigned == True %}
         <strong>Yes</strong>
@@ -27,7 +28,10 @@
   <p>When is the next lesson? <strong>{{lesson_note.next_lesson_date}}</strong></p>
   <p>Private Notes: <strong>{{lesson_note.private_notes}}</strong></p>
 </div>
-
+<div>
+  <a href="{% url 'lessonnoteupdate' Student.id lesson_note.id %}" value="Edit this lesson note">Edit your lesson note</a>
+  <a href="{% url 'lessonnotedelete' Student.id lesson_note.id %}" value="Delete this lesson note">Delete your lesson note</a>
+</div>
 <div>
   <h3>Lesson Summary</h3>
   <div>{{lesson_note.lesson_summary}}</div></div>

@@ -75,8 +75,20 @@ class LessonNoteCreate(CreateView):
 
 class LessonNoteUpdate(UpdateView): 
     model = LessonNote 
-    fields = '__all__'
+    form_class = LessonNoteForm
+    template_name = 'main_app/lessonnote_form.html'
+
+    def get_form(self, form_class=None):
+        form = super().get_form(form_class)   
+        # Get the current student
+        student_id = self.kwargs['student_id']
+        student = get_object_or_404(Student, id=student_id)       
+        # Set the student for the form
+        form.instance.student = student        
+        # Restrict the queryset of the 'student' field to the current student
+        form.fields['student'].queryset = Student.objects.filter(id=student.id)
+        return form
 
 class LessonNoteDelete(DeleteView):
       model = LessonNote
-      success_url = 'students/<int:student_id>/'
+      success_url = '/students'

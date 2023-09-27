@@ -8,6 +8,8 @@
   <form action="" method="POST">
     {% csrf_token %}
     <button type="submit" value="Yes">Yes, I want to delete this student.</button>
-    <button href="{% url 'student_detail' student.id %}" value="No">Nevermind, I want to keep this student. </button>
   </form>
+  <button><a href="{% url 'students_index' %}" value="No">Nevermind, I want to keep this student.</a></button>
+  
+
 {% endblock %}

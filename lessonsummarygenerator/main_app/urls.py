@@ -18,8 +18,8 @@ urlpatterns = [
     path('students/<int:pk>/delete/', views.StudentDelete.as_view(), name='student_delete'),
     path('students/<int:student_id>/lessons/<int:lesson_note_id>', views.lesson_note_detail, name='lesson_note_detail'),
     path('students/<int:student_id>/lessons/create', views.LessonNoteCreate.as_view(), name='lesson_note_create'),
-    path('students/<int:pk>/lessons/update/', views.LessonNoteUpdate.as_view(), name='lesson_note_update'),
-    path('students/<int:pk>/lessons/delete/', views.LessonNoteDelete.as_view(), name='lesson_note_delete'),
+    path('students/<int:student_id>/lessons/<int:pk>/update/', views.LessonNoteUpdate.as_view(), name='lessonnoteupdate'),
+    path('students/<int:student_id>/lessons/<int:pk>/delete/', views.LessonNoteDelete.as_view(), name='lessonnotedelete'),
 ]    
 
  

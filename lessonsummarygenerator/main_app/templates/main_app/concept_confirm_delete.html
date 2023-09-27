@@ -8,7 +8,7 @@
   <form action="" method="POST">
     {% csrf_token %}
     <button type="submit" value="Yes">Yes, I want to delete this concept.</button>
-    <button href="{% url 'detail' concept.id %}" value="No">Nevermind, I want to keep this concept. </button>
   </form>
+<button><a href="{% url 'detail' concept.id %}" value="No">Nevermind, I want to keep this concept.</a></button> 
 {% endblock %}
 
