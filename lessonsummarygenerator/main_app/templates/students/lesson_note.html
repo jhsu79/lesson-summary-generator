@@ -36,6 +36,6 @@
   <h3>Lesson Summary</h3>
   {% if lesson_note.lesson_summary %}
   <h2>Summary for {{Student.first_name}} for lesson on {{lesson_note.date}}</h2>
-  <div>{{lesson_note.lesson_summary}}</div></div>
+  <div>{{lesson_note.lesson_summary | linebreaks}}</div></div>
   {% endif %}
 {% endblock %} 

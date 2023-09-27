@@ -13,8 +13,7 @@ load_dotenv()
 
 # from .forms import LessonNoteForm
 # Create your views here.
-chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
-openai.api_key= os.getenv('OPEN_AI_KEY')
+
 
 class HomeView(TemplateView):
     template_name = 'home.html'
@@ -80,13 +79,16 @@ def lesson_note_detail(request, lesson_note_id, student_id):
 def summarize_lesson_note(lesson_note_text):
         openai.api_key= os.getenv('OPEN_AI_KEY')
         prompt = lesson_note_text 
+        print({prompt})
         response = openai.Completion.create(
-            model="gpt-3.5-turbo",
+            model="gpt-3.5-turbo-instruct",
             prompt=prompt,
             temperature=0.6,
+            max_tokens=2048,
         )
-        print ('')
-        summary = response.choices[0].message.content
+    
+        summary = response.choices[0].text
+        print (response.choices)
         return summary
 
 
@@ -121,7 +123,7 @@ class LessonNoteCreate(LoginRequiredMixin,CreateView):
         assigned_homework = form.cleaned_data['assigned_homework']
         next_lesson_date = form.cleaned_data['next_lesson_date']
 
-        lesson_note_text =  f"Create a four paragraph summary that references the {student}'s name following structure: the first paragraph summarizes the {homework_accuracy_level}, and {homework_completion_level} {homework_review_comments}, the second paragraph summarizes the {concepts_covered} and {lesson_comments}, the third paragraph creates an ordered list from the {assigned_homework}, and the 4th paragraph states the {next_lesson_date}"
+        lesson_note_text =  f"Create a four paragraph summary addressed to {student}'s parents using the following structure: the first paragraph summarizes the {homework_accuracy_level}, {homework_completion_level}, and {homework_review_comments}, the second paragraph summarizes the {concepts_covered} and {lesson_comments}, the third paragraph creates an ordered list from the {assigned_homework}, and the fourth paragraph states the {next_lesson_date}"
 
         summary = summarize_lesson_note(lesson_note_text)
         self.object.lesson_summary = summary
