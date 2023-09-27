@@ -70,6 +70,7 @@ def lesson_note_detail(request, lesson_note_id, student_id):
     student = get_object_or_404(Student, id=student_id)
     return render(request, 'students/lesson_note.html', {'Student': student,'lesson_note' : lesson_note})
 
+
 class LessonNoteCreate(LoginRequiredMixin,CreateView): 
     model = LessonNote 
     form_class = LessonNoteForm
