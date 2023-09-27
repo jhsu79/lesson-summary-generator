@@ -18,6 +18,7 @@
                     <a href ="{% url 'concepts_index' %}">all concepts</a>
                     <a href="{% url 'logout' %}">log out</a>
                     {% else %}
+                    <a href="{% url 'signup' %}">sign up</a>
                     <a href="{% url 'login' %}">log in</a>
                     {% endif %}
                 </div>
