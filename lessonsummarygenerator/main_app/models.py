@@ -11,6 +11,12 @@ class PROGRAM_CHOICES(Enum):
     GROUP = "Small Group"
     CLASS = "Classroom"
 
+class HOMEWORK_COMPLETION_CHOICES(Enum): 
+    NONE = 'None'
+    SOME = 'Less than 50%'
+    HALF = '50%'
+    MOST = 'Greater than 50%'
+    ALL =  '100%'
 
 # Create your models here.
 class Concept(models.Model):
@@ -41,14 +47,19 @@ class Student(models.Model):
 class LessonNote(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     date = models.DateField("Lesson Date")
-    homework_notes = models.CharField(max_length=100, blank=False)
+    homework_completion_level = models.CharField(
+        max_length=16,
+        choices=[(choice.value, choice.name) for choice in HOMEWORK_COMPLETION_CHOICES],
+    )
+    homework_accuracy_level = models.CharField(max_length=16, blank=False)
+    homework_review_comments = models.TextField(max_length=250, blank=False)
     concepts_covered = models.ManyToManyField(Concept, blank=True)
-    lesson_comments = models.CharField(max_length=200, blank=False)
+    lesson_comments = models.TextField(max_length=250, blank=False)
     homework_assigned = models.BooleanField(default=True)
     assigned_homework = models.TextField(max_length=250, blank=False)
     next_lesson_date = models.DateField("Next Lesson Date")
     private_notes = models.TextField(blank=False)
-    lesson_summary = models.TextField(max_length=500, blank=True)
+    lesson_summary = models.TextField(blank=True)
 
     def __str__(self):
         concepts = ", ".join(concept.name for concept in self.concepts_covered.all())

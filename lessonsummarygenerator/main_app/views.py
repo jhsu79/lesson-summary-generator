@@ -5,10 +5,15 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Concept, Student, LessonNote
 from .forms import LessonNoteForm
 from django.contrib.auth.decorators import login_required
+from dotenv import load_dotenv
 from django.contrib.auth.mixins import LoginRequiredMixin
+import openai, os
+load_dotenv()
+
 
 # from .forms import LessonNoteForm
 # Create your views here.
+
 
 class HomeView(TemplateView):
     template_name = 'home.html'
@@ -71,6 +76,22 @@ def lesson_note_detail(request, lesson_note_id, student_id):
     return render(request, 'students/lesson_note.html', {'Student': student,'lesson_note' : lesson_note})
 
 
+def summarize_lesson_note(lesson_note_text):
+        openai.api_key= os.getenv('OPEN_AI_KEY')
+        prompt = lesson_note_text 
+        print({prompt})
+        response = openai.Completion.create(
+            model="gpt-3.5-turbo-instruct",
+            prompt=prompt,
+            temperature=0.6,
+            max_tokens=2048,
+        )
+    
+        summary = response.choices[0].text
+        print (response.choices)
+        return summary
+
+
 class LessonNoteCreate(LoginRequiredMixin,CreateView): 
     model = LessonNote 
     form_class = LessonNoteForm
@@ -86,6 +107,28 @@ class LessonNoteCreate(LoginRequiredMixin,CreateView):
         # Restrict the queryset of the 'student' field to the current student
         form.fields['student'].queryset = Student.objects.filter(id=student.id)
         return form
+
+    def form_valid(self, form):
+        student_id = self.kwargs['student_id']
+        student = get_object_or_404(Student, id=student_id)       
+        form.instance.student = student        
+        response = super().form_valid(form)
+
+        ##Create form cleaned fields. 
+        homework_accuracy_level = form.cleaned_data['homework_accuracy_level']
+        homework_completion_level = form.cleaned_data['homework_completion_level']
+        homework_review_comments = form.cleaned_data['homework_review_comments']
+        concepts_covered = form.cleaned_data['concepts_covered']
+        lesson_comments = form.cleaned_data['lesson_comments']
+        assigned_homework = form.cleaned_data['assigned_homework']
+        next_lesson_date = form.cleaned_data['next_lesson_date']
+
+        lesson_note_text =  f"Create a four paragraph summary addressed to {student}'s parents using the following structure: the first paragraph summarizes the {homework_accuracy_level}, {homework_completion_level}, and {homework_review_comments}, the second paragraph summarizes the {concepts_covered} and {lesson_comments}, the third paragraph creates an ordered list from the {assigned_homework}, and the fourth paragraph states the {next_lesson_date}"
+
+        summary = summarize_lesson_note(lesson_note_text)
+        self.object.lesson_summary = summary
+        self.object.save()
+        return response
 
 class LessonNoteUpdate(LoginRequiredMixin,UpdateView): 
     model = LessonNote 
@@ -120,3 +163,4 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
+
