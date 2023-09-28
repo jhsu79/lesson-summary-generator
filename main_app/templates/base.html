@@ -12,19 +12,19 @@
 <body class="justify-content-center bg-warning">
     <header> 
         
-        <nav class="navbar navbar-expand-sm bg-warning-subtle">
+        <nav class="navbar navbar-expand-sm bg-warning-subtle m-2 rounded-2">
                 <div class="container-fluid">
-                   <a class="btn btn-warning border-black" role="button" href="{% url 'home' %}">home</a></button> 
-                   <a class="btn btn-warning border-black" role="button"href="{% url 'about' %}">about</a></button> 
+                   <a class="btn btn-warning border-black fw-semibold border-3" role="button" href="{% url 'home' %}">home</a></button> 
+                   <a class="btn btn-warning border-black fw-semibold border-3" role="button"href="{% url 'about' %}">about</a></button> 
                     {% if user.is_authenticated %}
-                    <a class="btn btn-outline-primary" role="button" href="{% url 'concept_create' %}">add a new concept</a>
-                    <a class="btn btn-outline-primary" role="button" href="{% url 'student_create' %}">add a student</a>
-                    <a class="btn btn-outline-primary" role="button" href="{% url 'students_index'%}">all students</a> 
-                    <a class="btn btn-outline-primary" role="button" href ="{% url 'concepts_index' %}">all concepts</a>
-                    <a class="btn btn-outline-primary" role="button" href="{% url 'logout' %}">log out</a>
+                    <a class="btn btn-outline-dark border border-warning border-3 fw-bold rounded-3" role="button" href="{% url 'concept_create' %}">add a new concept</a>
+                    <a class="btn btn-outline-dark border border-warning border-3 fw-bold rounded-3" role="button" href="{% url 'student_create' %}">add a student</a>
+                    <a class="btn btn-warning border-black fw-semibold border-3" role="button" href="{% url 'students_index'%}">all students</a> 
+                    <a class="btn btn-warning border-black fw-semibold border-3" role="button" href ="{% url 'concepts_index' %}">all concepts</a>
+                    <a class="btn btn-dark text-warning border-warning border-3" role="button" href="{% url 'logout' %}">log out</a>
                     {% else %}
-                    <a class="btn btn-dark text-warning border-warning" role="button"href="{% url 'signup' %}">sign up</a>
-                    <a class="btn btn-dark text-warning border-warning" role="button" href="{% url 'login' %}">log in</a>
+                    <a class="btn btn-dark text-warning border-warning border-3" role="button"href="{% url 'signup' %}">sign up</a>
+                    <a class="btn btn-dark text-warning border-warning border-3" role="button" href="{% url 'login' %}">log in</a>
                     {% endif %}
                 </div>
         </nav>

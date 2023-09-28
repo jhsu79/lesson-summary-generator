@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div><h3>Add a Concept</h3>
-<form action="" method="POST">
-    {% csrf_token %}
+
+<form class="d-flex flex-column bg-warning-subtle w-100 p-3 justify-content-left text-secondary border border-white rounded-5" action="" method="POST">
+  <h3 class="bg-warning p-2 text-black border border-black fw-semibold rounded-2 mb-5">add a new <strong class="text-secondary fs-2">concept</strong></h3> 
+  {% csrf_token %}
     <table>
       {{ form.as_table }}
     </table>
-    <input type="submit" value="Save Concept" class="btn">
-
+    <input class="btn btn-outline-dark m-5 border border-warning border-4 fw-bold rounded-3" type="submit" value="save this concept" class="btn">
   </form>
-</div>
+
 {% endblock %} 

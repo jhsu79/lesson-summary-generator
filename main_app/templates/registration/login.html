@@ -3,14 +3,16 @@
 
 
 
-<form class="container-fluid bg-black text-warning w-50 p-5 text-warning rounded-3 border border-5 border-warning" method="POST" action="{% url 'login' %}">
-    <h1>log-in</h1>
+<form class="bg-secondary w-100 p-3 mt-5 justify-content-left text-warning border border-white rounded-5" method="POST" action="{% url 'login' %}">
+    <h1 class="bg-warning-subtle p-2 text-black border border-black rounded-2 mb-5">log-in</h1>
     {% csrf_token %}
-    <table class='p-2'>
+    <table class='p-4'>
     {{ form.as_table }}
     </table>
     <input type="hidden" name="next" value="{{ next }}">
-    <button class="btn btn-outline-warning border" type="submit" class="btn">Log In</button>
+    <button class="mt-5 btn btn-dark btn btn-outline-warning border fs-4 fw-semi-bold" type="submit" class="btn">log In</button>
+    <a class="mt-5 btn btn-dark btn btn-outline-warning border fs-4 fw-semi-bold" role="button"href="{% url 'signup' %}">i need an account</a>
+
   </form>
 
 {% endblock %}

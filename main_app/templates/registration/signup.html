@@ -3,13 +3,12 @@
 
 <p class="bg-black text-white">{{ error_message }}</p>
 
-<form class="container-fluid bg-black w-75 p-3 text-warning rounded-5" method="POST" action="{% url 'signup' %}">
-  <h1 class="bg-warning p-2 text-black rounded-2">create a LSG account</h1>  
+<form class="bg-secondary w-100 p-3 justify-content-left text-warning border border-white rounded-5" method="POST" action="{% url 'signup' %}">
+  <h1 class="bg-warning-subtle p-2 text-black border border-black rounded-2 mb-5">create a LSG account</h1>  
   {% csrf_token %}
-    <table>
-    {{ form.as_table }}
-    </table>
+    {{ form.as_p}}
     <input type="hidden" name="next" value="{{ next }}">
-    <button class="btn btn-outline-warning border" type="submit" class="btn">Sign Up</button>
+    <button class="btn btn-dark btn btn-outline-warning border fs-4 fw-semi-bold mt-5" type="submit" class="btn">sign up</button>
+    <a class="btn btn-dark btn btn-outline-warning border fs-4 fw-semi-bold mt-5" role="button" href="{% url 'login' %}">i already have an account</a>
   </form>
 {% endblock %}
