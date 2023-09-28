@@ -2,7 +2,7 @@
 {% block content %}
 <h2 class="mt-5 fs-1 fw-bold text-center text-black"> <strong class="text-white">All </strong>Concepts</h2> 
 {% for concept in concepts %}
-<a class="text-decoration-none fs-4 fw-bold text-center text-secondary border rounded-2 link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{% url 'detail' concept.id %}">
+<a class="text-decoration-none fs-4 fw-bold text-center text-secondary rounded-2 link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{% url 'detail' concept.id %}">
 <div>{{concept.name}}</div>
 </a>
 {% endfor %} 
