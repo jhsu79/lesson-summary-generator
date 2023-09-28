@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container-fluid flex-row p-5 bg-warning justify-content-around w-75 rounded-2">
+<div class="d-flex container-fluid flex-row p-5 bg-warning justify-content-around w-75 rounded-2">
     <div class="container-fluid m-2 p-5 d-flex bg-black justify-content-around w-75 fs-1 fw-bold text-white rounded-2">lesson</div>
     <div class="container-fluid m-2 p-5 d-flex bg-warning-subtle justify-content-center w-75 fs-1 fw-bold text-secondary rounded-2">summary</div>
     <div class="container-fluid m-2 p-5 d-flex bg-white justify-content-around fs-1 w-75 fw-bold">generator</div>
 </div>
-
+<div class="d-grid gap-4 col-4 mx-auto bg-secondary p-3 rounded-2">
+    <a class="btn btn-dark btn btn-outline-warning border fs-2 fw-semi-bold " role="button"href="{% url 'signup' %}">sign up</a>
+    <a class="btn btn-dark btn btn-outline-warning border fs-2 fw-semi-bold" role="button" href="{% url 'login' %}">log in</a>
+</div>
 {% endblock %} 
