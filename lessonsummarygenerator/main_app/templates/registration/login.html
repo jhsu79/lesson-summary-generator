@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>lesson summary generator</h1>
 
-<form method="POST" action="{% url 'login' %}">
+
+<form class="container-fluid bg-black text-warning w-50 p-5 text-warning rounded-3 border border-5 border-warning" method="POST" action="{% url 'login' %}">
+    <h1>log-in</h1>
     {% csrf_token %}
-    <table>
+    <table class='p-2'>
     {{ form.as_table }}
     </table>
     <input type="hidden" name="next" value="{{ next }}">
-    <button type="submit" class="btn">Log In</button>
+    <button class="btn btn-outline-warning border" type="submit" class="btn">Log In</button>
   </form>
 
 {% endblock %}

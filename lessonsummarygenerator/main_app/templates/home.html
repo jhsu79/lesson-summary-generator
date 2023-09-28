@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="d-flex p-5 flex-row justify-content-around flex-shrink-4">
-    <div class="w-75 m-0 d-flex justify-content-center fs-1 fw-bold text-white">lesson</div>
-    <div class="w-75 m-0 d-flex justify-content-center fs-1 fw-bold text-secondary">summary</div>
-    <div class="w-75 m-0 d-flex justify-content-center fs-1 fw-bold">generator</div>
-  </div>
+<div class="container-fluid flex-row p-5 bg-warning justify-content-around rounded-2">
+    <div class="container-fluid m-2 p-5 d-flex bg-black justify-content-around fs-2 fw-bold text-white rounded-2">lesson</div>
+    <div class="container-fluid m-2 p-5 d-flex bg-warning-subtle justify-content-center fs-1 fw-bold text-secondary rounded-2">summary</div>
+    <div class="container-fluid m-2 p-5 d-flex bg-white justify-content-around fs-1 fw-bold">generator</div>
+</div>
+
 {% endblock %} 

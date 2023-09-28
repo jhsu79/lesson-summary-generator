@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>lesson summary generator</h1>
-<h3>create an account</h3>
-<p class="red-text">{{ error_message }}</p>
+<p class="bg-black text-white">{{ error_message }}</p>
 
-<form method="POST" action="{% url 'signup' %}">
-    {% csrf_token %}
+<form class="container-fluid bg-black w-75 p-3 text-warning rounded-5" method="POST" action="{% url 'signup' %}">
+  <h1 class="bg-warning p-2 text-black rounded-2">create a LSG account</h1>  
+  {% csrf_token %}
     <table>
-    {{ form.as_p }}
+    {{ form.as_table }}
     </table>
     <input type="hidden" name="next" value="{{ next }}">
-    <button type="submit" class="btn">Sign Up</button>
+    <button class="btn btn-outline-warning border" type="submit" class="btn">Sign Up</button>
   </form>
 {% endblock %}
