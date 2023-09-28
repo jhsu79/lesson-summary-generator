@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2> Your Students</h2> 
+<h2 class="mt-5 fs-1 fw-bold text-center text-black"> <strong class="text-white">Your </strong>Students</h2> 
 {% for student in students %}
-<a href="{% url 'student_detail' student.id %}">
+<a class="text-decoration-none fs-4 fw-bold text-center text-secondary border rounded-2 link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"  href="{% url 'student_detail' student.id %}">
 <div>{{student.first_name}} {{student.last_name}}</div>
 </a>
 {% endfor %} 
