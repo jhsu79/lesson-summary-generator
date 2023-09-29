@@ -1,9 +1,49 @@
-{% extends 'base.html' %}
-{% block content %}
-<div class="d-grid container-fluid justify-content-center">
-<h2 class="d-grid gap-2 fs-1 container-fluid text-center mt-5 w-50 p-2 bg-black border border-white rounded-2"><small class="text-secondary">About the </small><strong class="text-warning"> Lesson Summary Generator</strong></h2>
+{% extends 'base.html' %} {% block content %}
+<div class="container-fluid justify-content-center">
+  <h2 class="d-grid gap-2 fs-1 container-fluid text-center mt-5 w-50 p-2 bg-black border border-white rounded-2">
+    <small class="text-secondary">About the </small><strong class="text-warning"> Lesson Summary Generator</strong>
+  </h2>
+   <div class="container-fluid mt-4 p-1 bg-warning-subtle border border-black rounded-2">
+    <p class="container-fluid justify-content-center fs-4 mx-3 p-2">
+        <h2 class="fw-semibold text-center"> Introducing the Ultimate Teaching Companion: 
+        <strong class="text-secondary">The Lesson Summary Generator(LSG) </strong> </h2>
+        <p class="fs-3 mx-2 text-center">Unlock the power of productivity with an app designed to revolutionize the
+          way educators, instructors, and tutors manage their teaching materials
+          and student progress.</p>
+    </p>
 
-<div class="d-flex flex-row container-fluid m-1 p-1  bg-warning-subtle border border-black rounded-2"> <p class="container-fluid justify-content-center fs-4 mx-3 p-2"><strong class="text-secondary">The Lesson Summary Generator (LSG) </strong> <small class="fs-5">is a tool for a user (likely an instructor, teacher, or a tutor) to create a list of students and list of concepts the instructor will cover. The user can then use a form to enter a student's performance on homework, the concepts covered during the lesson, and assignments for the next lesson. Using that form, LSG will create summaries using OpenAI. Ultimately, these summaries can then be modified or edited for clarity or length as needed.</small></p>
+    <ol class=" bg-warning mx-2 text-left">
+      <li class="fs-5 mx-2 text-left">
+        <strong>Streamlined Lesson Planning:</strong> With LSG, you can effortlessly create
+        comprehensive student rosters and a detailed list of concepts you'll be
+        covering.
+      </li>
+      <li class="fs-5 mx-2 text-left">
+        <strong>Effortless Performance Tracking:</strong> The intuitive platform allows you to
+        input student homework performance, record the concepts discussed during
+        each lesson, and set assignments for future classes with just a few
+        clicks.
+      </li>
+      <li class="fs-5 mx-2 text-left">
+        <strong>Instant AI-Powered Summaries:</strong> Harness the power of OpenAI with LSG. The
+        AI-driven technology instantly generates concise summaries of your
+        lessons, saving you time and energy.
+      </li>
+      <li class="fs-5 mx-2 text-left">
+        <strong>Customizable Summaries:</strong> Tailor your lesson summaries to perfection.
+        Easily modify and edit the generated summaries for clarity and length,
+        ensuring they align perfectly with your teaching style and goals.
+      </li>
+    </ol>
+    <p class="fs-3 mx-2 text-center">
+    Maximize your teaching efficiency, enhance your students' learning
+    experience, and stay at the forefront of educational innovation. </p>
+    <p class="fs-3 mx-2 text-center">Get started today and revolutionize your teaching methods!</p>
 </div>
+<h5 class="d-grid gap-2 fs-5 container-fluid text-center mt-4 w-25 p-1 bg-secondary border border-white rounded-2">
+    <p><small class="text-warning">this site was created by </small><small class="text-white"> Joshua N Hsu </small></p>
+    <p><small class="text-warning">powered by </small><small class="text-white"> Django, Python, OpenAI, and Bootstrap </small></p>
+    <p><small class="text-warning">all my links here: </small><small class="text-white"> GitHub | LinkedIn| Project Repository</small></p>
+  </h5>
 </div>
-{% endblock %} 
+{% endblock %}
