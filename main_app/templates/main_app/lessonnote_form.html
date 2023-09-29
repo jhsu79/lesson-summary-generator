@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div><h3>Enter your lesson notes</h3>
-<form action="" method="POST">
+<div>
+<form class="container-fluid bg-warning-subtle w-100 p-3 text-secondary border border-black rounded-2" action="" method="POST">
+  <h3 class="bg-warning p-2 text-black border border-black fw-semibold rounded-2 mb-5">Enter your lesson notes</h3>  
     {% csrf_token %}
     <table>
-      {{ form.as_table }}
-      
+      {{ form.as_table }}    
     </table>
-    <input type="submit" value="save lesson note and generate summary" class="btn">
+    <input type="submit" value="save lesson note and generate summary" class="btn btn-outline-dark m-5 border border-warning border-4 fw-bold rounded-3">
   </form>
 </div>
 
