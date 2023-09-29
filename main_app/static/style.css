@@ -1,19 +1,17 @@
-main {
-    margin: 10%;
-}
-
 a {
     text-decoration: none;
 }
 
-#id_description, #id_name, #id_keywords, #id_first_name, #id_last_name, #id_pronouns, #id_program_type, #id_user {
-    width: 100%; 
-    margin: 20px; 
-}
+
 
 td * {
     width: 100%; 
     margin: 2%; 
+}
+
+#id_description, #id_name, #id_keywords, #id_first_name, #id_last_name, #id_pronouns, #id_program_type, #id_user {
+    width: 90%; 
+    margin: 20px; 
 }
 #id_homework_assigned {
     height: 25px;
