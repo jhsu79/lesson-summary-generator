@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="d-flex container-fluid flex-row p-5 bg-warning justify-content-around w-75 rounded-2">
-    <div class="d-flex container-fluid m-1 p-5 d-flex bg-black justify-content-around w-75 fs-1 fw-bold text-white border border-3 border-white rounded-2">lesson</div>
-    <div class="d-flex container-fluid m-1 p-5 d-flex bg-warning-subtle justify-content-center w-75 fs-1 fw-bold border border-3 border-secondary text-secondary rounded-2">summary</div>
-    <div class="d-flex container-fluid m-1 p-5 d-flex bg-white justify-content-around fs-1 w-75 fw-bold border border-3 border-black rounded-2">generator</div> 
+<div class="d-flex container-fluid flex-row fs-4 p-3 bg-warning justify-content-around w-50 rounded-2">
+    <div class="m-1 p-1 bg-black w-75  fs-4 fw-bold text-center text-white border border-3 border-white rounded-2"> lesson </div>
+    <div class="m-1 p-1 bg-warning-subtle fs-4 w-75 text-center fw-bold border border-3 border-secondary text-secondary rounded-2"> summary </div>
+    <div class="m-1 p-1 bg-white   w-75 fw-bold text-center border border-3 border-black rounded-2"> generator </div> 
 </div>
 
 {% if user.is_authenticated %}
