@@ -3,9 +3,10 @@
 
 <form class="container-fluid bg-warning-subtle w-100 p-3 text-secondary border border-black rounded-2" action="" method="POST">
   <h3 class="bg-warning p-2 text-black border border-black fw-semibold rounded-2 mb-5">add a new <strong class="text-secondary fs-2">concept</strong></h3> 
+   
   {% csrf_token %}
     <table>
-      {{ form.as_div }}
+      {{ form.as_table }}
     </table>
     <input class="btn btn-outline-dark m-5 border border-warning border-4 fw-bold rounded-3" type="submit" value="save this concept" class="btn">
   </form>
