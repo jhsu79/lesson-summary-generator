@@ -1,27 +1,20 @@
 {% extends 'base.html' %} {% block content %}
 
-<div>
-  <div>
-    <h1>Concept Details</h1>
-    <div>
-        <button><a href="{% url 'concept_update' concept.id %}" value="Edit">Edit this concept</a></button>
-        <button><a href="{% url 'concept_delete' concept.id %}" value="Delete">Delete this concept</a></button>
+
+<div class="mx-3 card w-75 border-black bg-warning-subtle">
+  <div class="card-body">        
+      <h1 class="card-title bg-secondary w-100 fs-1 p-1 fw-bold text-warning text-left rounded-2">{{concept.name}}</h3>
+        <p class="card-subtitle mt-2">{{concept.description}}</p>
+        <p class="w-100 mt-3 card-text bg-secondary text-white p-1 text-left rounded-2"><strong>Keywords</strong>{% for keyword in concept.keywords %} 
+            <ul class="list-group list-group-flush m-3 mt-2">
+              <li class="w-100 list-group-item list-group-item-secondary text-center bg-warning border rounded-pill">{{ keyword }}</li>
+            </ul> 
+            {% endfor %}
+          </p>
+        <a class="mx-5 mb-2 btn btn-outline-dark border border-warning border-3 fw-bold rounded-3 card-link" href="{% url 'concept_update' concept.id %}" value="Edit">Edit this concept</a>
+        <a class="mx-5 btn btn-dark text-warning border-warning border-3 fw-bold rounded-3 card-link" href="{% url 'concept_delete' concept.id %}" value="Delete">Delete this concept</a>
       </div>
-  </div>
-  <div>
-    <div>
-        <h3>Concept Name:</h3>
-        <p>{{concept.name}}</p>
     </div>
-    <div>
-        <h3>Description:</h3>
-        <p>{{concept.description}}</p>
-    </div>
-    <div>
-        <h3>Keywords:</h3>
-        <p>{% for keyword in concept.keywords %} <ul><li>{{ keyword }}</li></ul> {% endfor %}</p>
-    </div>
-  </div>
-</div>
+
 
 {% endblock %}

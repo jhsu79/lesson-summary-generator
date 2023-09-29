@@ -1,36 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<div>
-  <div>
-    <h1>Student Details</h1>
-    <div>
-       <button><a href="{% url 'student_update' Student.id %}" value="Edit">Edit this</a></button>
-       <button><a href="{% url 'student_delete' Student.id %}" value="Delete"> Delete this</a></button>
-       <button><a href="{% url 'lesson_note_create' Student.id %}" value="Enter a new lesson note">Enter a new lesson note</a></button>
-      </div>
+<div class="mx-3 card w-75 border-black bg-warning-subtle">
+  <div class="card-body">
+    <h1 class="card-title bg-secondary w-100 fs-1 text-left rounded-2" ><strong class="mx-2 text-warning"> {{Student.first_name}} </strong><strong class="text-white"> {{Student.last_name}}</strong> </h1>
+    <p class="card-subtitle"><strong>Pronouns:</strong> {{ Student.pronouns}} </p>
+    <p class="card-subtitle"><strong>Program Type: </strong> {{ Student.program_type}}</p>
+    </p>
   </div>
-  <div>
-    <div>
-        <p><strong>Student Name:</strong> {{Student.first_name}} {{Student.last_name}}</p>
-    </div>
-    <div>
-      <p><strong>Pronouns:</strong> {{ Student.pronouns}} </p>
-  </div>
-    <div>
-        
-        <p><strong>Program Type: </strong> {{ Student.program_type}}</p>
-    </div>
-  </div>
-  <div>
-    <h2>Lesson Summaries</h2>
-    <ul>
-        {% for lesson_note in lesson_notes %}
-            <li>{{ lesson_note.lesson_summary|safe }}</li>
-            <button><a href="{% url 'lesson_note_detail' Student.id lesson_note.id %}">Edit/View the lesson note</a></button>
-        {% endfor %} 
-    </ul>
+</div>
+  <div class="d-flex mt-3 mx-3"> 
+    <a class="mx-2 mt-2 btn btn-light btn border border-black border-3 fs-5 fw-semi-bold card-link" href="{% url 'student_update' Student.id %}" value="Edit">edit student details</a>
+    <a class="mx-2 mt-2 btn btn-dark text-warning border-white border-3 fs-5 fw-semi-bold card-link" href="{% url 'student_delete' Student.id %}" value="Delete">delete student details</a>
   </div>
 </div>
 
+
+<div class="mx-3 d-grid col-10">
+  <div class="mt-5 mx-2 bg-warning-subtle border border-black rounded-2">
+     <h2 class="bg-secondary fs-1 m-2 text-left text-warning rounded-2"> <strong class="mx-2">Lesson Summaries</strong> </h2>
+      <a  class="mx-3 btn btn-outline-dark border border-warning border-3 fw-bold rounded-3" href="{% url 'lesson_note_create' Student.id %}" value="Enter a new lesson note">Enter a new lesson note</a>
+    <div>
+      <ul class="bg-secondary list-group list-group-flush m-3 mt-2">
+        {% for lesson_note in lesson_notes %}
+          <div class="border border-black border-3 rounded-2 m-2">
+              <li class="list-group-item">{{lesson_note.date}}</li>
+              <li class="list-group-item list-group-item-warning">{{ lesson_note.lesson_summary|safe | linebreaks }}</li>
+              <a class=" w-100 list-group-item btn btn-outline-dark border border-warning border-3 fw-bold rounded-3" href="{% url 'lesson_note_detail' Student.id lesson_note.id %}">Edit/View the lesson note</a>
+          </div>
+            {% endfor %} 
+    </ul>
+  </div>
+  </div>
+</div>
+</div>
 {% endblock %}
