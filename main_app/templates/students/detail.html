@@ -25,7 +25,7 @@
           <div class="border border-black border-3 rounded-2 m-2">
               <li class="list-group-item">{{lesson_note.date}}</li>
               <li class="list-group-item list-group-item-warning">{{ lesson_note.lesson_summary|safe | linebreaks }}</li>
-              <a class=" w-100 list-group-item btn btn-outline-dark border border-warning border-3 fw-bold rounded-3" href="{% url 'lesson_note_detail' Student.id lesson_note.id %}">Edit/View the lesson note</a>
+              <a class="mx-5 mt-2 mb-2 btn btn-light btn border border-black border-3 fs-5 fw-semi-bold card-link" href="{% url 'lesson_note_detail' Student.id lesson_note.id %}">View the lesson note</a>
           </div>
             {% endfor %} 
     </ul>
