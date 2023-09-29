@@ -1,41 +1,53 @@
 {% extends 'base.html' %} 
 {% block content %}
 
-<div>
-  <h3> {{Student.first_name}} {{Student.last_name}}</h3>
+<div class="mx-3 card w-75 border-black bg-warning-subtle">
+  <div class="card-body">
+    <h1 class="card-title bg-secondary w-100 fs-1 text-left rounded-2" ><strong class="mx-2 text-warning"> {{Student.first_name}} </strong><strong class="text-white"> {{Student.last_name}}</strong> </h1>
+    
+    <p class="card-subtitle"><strong>Pronouns:</strong> {{ Student.pronouns}} </p>
+    <p class="card-subtitle"><strong>Program Type: </strong> {{ Student.program_type}}</p>
+    </p>
+  </div>
 </div>
-<div>  
-  <p>Lesson Note for <strong>{{lesson_note.date}}</strong></h3>
-  <p>How much of the homework did the student complete? <strong>{{lesson_note.homework_completion_level}}</strong></p>
-  <p>What was the approximate percentage of accuracy? <strong>{{lesson_note.homework_accuracy_level}}</strong></p>
-  <p>Any notes you want to add about the homework from last session? <strong>{{lesson_note.homework_notes}}</strong></p>
-  <p>What concepts did you cover in the lesson today? 
-    {% for concept in lesson_note.concepts_covered.all %}
-     <strong>{{ concept.name }}, </strong> 
-    {% endfor %}</p>
-  <p>Is there homework assigned today? 
-      {% if lesson_note.homework_assigned == True %}
-        <strong>Yes</strong>
-      {% else %}
-        <strong>No</strong>
+
+  <div class="d-flex flex-row">
+   <div class="mx-3 d-grid col-6">
+    <div class="mt-3 mx-3 bg-warning-subtle border border-black rounded-2">
+       <h2 class="bg-secondary fs-1 mx-3 mt-2 text-left text-warning rounded-2"> <strong class="mx-2">Lesson Notes</strong> </h2>
+       <h5 class="mx-3">for <strong>{{lesson_note.date}}</strong></h5>
+       <ul class="list-group list-group-flush m-3 mt-2">
+          <li class="list-group-item text-white bg-secondary border border-2 border black rounded-2"><small class="fs-5 text-warning">How much of the homework did the student complete? </small><strong>{{lesson_note.homework_completion_level}}</strong></li class="list-group-item text-white bg-warning border border-2 border black rounded-2">
+          <li class="list-group-item text-white bg-secondary border border-2 border black rounded-2"><small class="fs-5 text-warning">What was the approximate percentage of accuracy? </small><strong>{{lesson_note.homework_accuracy_level}}</strong></li class="list-group-item text-white bg-warning border border-2 border black rounded-2">
+          <li class="list-group-item text-white bg-secondary border border-2 border black rounded-2"><small class="fs-5 text-warning">Any notes you want to add about the homework from last session? </small><strong>{{lesson_note.homework_notes}}</strong></li class="list-group-item text-white bg-warning border border-2 border black rounded-2">
+          <li class="list-group-item text-white bg-secondary border border-2 border black rounded-2"><small class="fs-5 text-warning">What concepts did you cover in the lesson today? </small>
+          {% for concept in lesson_note.concepts_covered.all %}
+           <strong>{{ concept.name }}, </strong> 
+          {% endfor %}</li class="list-group-item text-white bg-warning border border-2 border black rounded-2">
+          <li class="list-group-item text-white bg-secondary border border-2 border black rounded-2"><small class="fs-5 text-warning">Is there homework assigned today?</small>
+            {% if lesson_note.homework_assigned == True %}
+              <strong>Yes</strong>
+            {% else %}
+              <strong>No</strong>
+            {% endif %}
+          </li class="list-group-item text-white bg-warning border border-2 border black rounded-2">
+          <li class="list-group-item text-white bg-secondary border border-2 border black rounded-2"><small class="fs-5 text-warning">What is the assigned homework?</small>
+            {% if lesson_note.homework_assigned == True %} 
+              <strong>{{lesson_note.assigned_homework}}</strong>
+            {% endif %}   
+          </li class="list-group-item text-white bg-warning border border-2 border black rounded-2">
+          <li class="list-group-item text-white bg-secondary border border-2 border black rounded-2"><small class="fs-5 text-warning">When is the next lesson?</small><strong> {{lesson_note.next_lesson_date}}</strong></li class="list-group-item text-white bg-warning border border-2 border black rounded-2">
+          <li class="list-group-item text-white bg-secondary border border-2 border black rounded-2"><small class="fs-5 text-warning">Private Notes:</small><strong> {{lesson_note.private_notes}}</strong></li class="list-group-item text-white bg-warning border border-2 border black rounded-2">
+        </ul>
+        <a class="mx-5 mt-2 btn btn-light btn border border-black border-3 fs-5 fw-semi-bold card-link" href="{% url 'lessonnoteupdate' Student.id lesson_note.id %}" value="Edit this lesson note">Edit your lesson note</a>
+        <a class="mx-5 mt-2 btn btn-light btn border border-black border-3 fs-5 fw-semi-bold card-link" href="{% url 'lessonnotedelete' Student.id lesson_note.id %}" value="Delete this lesson note">Delete your lesson note</a>
+    </div>
+  </div>
+    <div class="mt-3 mx-3 p-3 bg-warning-subtle border border-black rounded-2">
+      {% if lesson_note.lesson_summary %}
+      <h2 class="bg-secondary fs-1 mx-3 text-center text-warning rounded-2"><strong>Lesson Summary</strong> </h2>
+          <p class="text-left mx-5 p-2">{{lesson_note.lesson_summary | linebreaks}}</p>
       {% endif %}
-  </p>
-  <p>What is the assigned homework? 
-    {% if lesson_note.homework_assigned == True %} 
-    <strong>{{lesson_note.assigned_homework}}</strong>
-    {% endif %}   
-  </p>
-  <p>When is the next lesson? <strong>{{lesson_note.next_lesson_date}}</strong></p>
-  <p>Private Notes: <strong>{{lesson_note.private_notes}}</strong></p>
+    </div>
 </div>
-<div>
-<button><a href="{% url 'lessonnoteupdate' Student.id lesson_note.id %}" value="Edit this lesson note">Edit your lesson note</a></button>
-<button><a href="{% url 'lessonnotedelete' Student.id lesson_note.id %}" value="Delete this lesson note">Delete your lesson note</a></button>
-</div>
-<div>
-  <h3>Lesson Summary</h3>
-  {% if lesson_note.lesson_summary %}
-  <h2>Summary for {{Student.first_name}} for lesson on {{lesson_note.date}}</h2>
-  <div>{{lesson_note.lesson_summary | linebreaks}}</div></div>
-  {% endif %}
-{% endblock %} 
+{% endblock %}   
