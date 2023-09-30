@@ -1,7 +1,9 @@
 #[Lesson Summary Generator](https://dashboard.heroku.com/apps/lessonsummarygenerator)
+Created by Joshua N Hsu
+[GitHub](https://github.com/jhsu79) | [Linkedin](https://www.linkedin.com/in/joshuanhsu/) | [Portfolio](https://joshuahsu.netlify.app/)
 
 ## Project Description: 
-Lesson Summary Generator is a mobile-ready web application that offers educators an integrated platform where they can effortlessly create student rosters, outline detailed concepts to be covered, record homework performance, document lesson discussions, and assign future tasks with ease. Leveraging the power of OpenAI, LSG provides instant AI-powered summaries, significantly reducing time and effort spent on manual summarization tasks. Furthermore, LSG empowers instructors to tailor these summaries to their unique teaching styles and objectives, ensuring optimal alignment with their students' needs. This project reimagines educational workflows, making them more efficient, effective, and adaptable to individual teaching philosophies.
+Lesson Summary Generator is a mobile-ready, responsive web application that offers educators an integrated platform where they can effortlessly create student rosters, outline detailed concepts to be covered, record homework performance, document lesson discussions, and assign future tasks with ease. Leveraging the power of OpenAI, LSG provides instant AI-powered summaries, significantly reducing time and effort spent on manual summarization tasks. Furthermore, LSG empowers instructors to tailor these summaries to their unique teaching styles and objectives, ensuring optimal alignment with their students' needs. This project reimagines educational workflows, making them more efficient, effective, and adaptable to individual teaching philosophies.
 
 
 ## How to use Lesson Summary Generator 
@@ -87,20 +89,21 @@ Lesson Summary Generator is a mobile-ready web application that offers educators
 as of 10/1/2023
 
 #### Planned Structural Changes.  
-1. Include a Front-end [REACT Framework](https://react.dev/) and switch to a Django REST Framework. 
-1. Explore the use of [Tailwind CSS Framwework](https://tailwindcss.com/) and [Sass](https://sass-lang.com/) for more customization.
+1. Include a Front-end [REACT Framework](https://react.dev/) and switch to a [Django REST Framework](https://www.django-rest-framework.org/). 
+1. Explore the use of [Tailwind CSS Framwework](https://tailwindcss.com/) and [Sass](https://sass-lang.com/) for more direct CSS customization.
 1. Explore integration of [Grammarly API](https://developer.grammarly.com/) when writing concepts or editing notes 
 
 #### Quality of Life Improvements 
-1. Update the Student Form View to only allow for the current user to be selected. 
-2. Update the Student detail view to include concepts covered from previous lessons.  
-3. Update the Student model to include more details about the student. 
-4. Update the Student detail view to offer pagination. 
+1. Update the student form view to only allow for the current user to be selected. 
+2. Update the student detail view to include concepts covered from previous lessons.  
+3. Update the student model to include more details about the student. 
+4. Update the student detail view to offer pagination. 
 5. Allow users to search for concepts using keywords. 
 6. Finesse the inputs for the lesson note form and finesse the prompt for the summary. 
-7. Include Calendar Widgets. 
+7. Include calendar widgets. 
 8. Allow users to provide direct links to homework. 
 9. Upgrade accessibility features. 
 10. Adding grammar, tone and style buttons that can prompt the LSG to revise summaries based on the preferences of the instructor and needs of the student's families
 
-
+#### Want to contribute to this project? 
+Contact me on [GitHub](https://github.com/jhsu79) or on [Linkedin](https://www.linkedin.com/in/joshuanhsu/)
