@@ -69,13 +69,12 @@ class StudentDelete(LoginRequiredMixin,DeleteView):
       model = Student
       success_url = '/students'
 
-@login_required
 def lesson_note_detail(request, lesson_note_id, student_id):
     lesson_note = LessonNote.objects.get(id=lesson_note_id)
     student = get_object_or_404(Student, id=student_id)
     return render(request, 'students/lesson_note.html', {'Student': student,'lesson_note' : lesson_note})
 
-@login_required
+
 def summarize_lesson_note(lesson_note_text):
         openai.api_key= os.getenv('OPEN_AI_KEY')
         prompt = lesson_note_text 
