@@ -35,9 +35,12 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 <br>
 1. To view a list of all your concepts, click on the ``all concepts`` in the navigate menu or the home page. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 20 21 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/34be9927-5da4-45a8-9f58-833744dc513a">
-1. To view the details of an individual concept, click on the name of the concept on the ``all concepts`` page. 
-1. To edit/delete the concept, click the corresponding button. 
-1. After editing the concept, make sure to click save.   
+<br>
+3. To view the details of an individual concept, click on the name of the concept on the ``all concepts`` page. 
+4. To edit/delete the concept, click the corresponding button. 
+5. After editing the concept, make sure to click save.
+<img width="750" alt="Screenshot 2023-09-30 at 12 24 29 AM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d4608808-537a-419d-ac34-08ab393989e2">
+     
 <i>Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>all</b> users.</i> 
 
 #### Students 
@@ -47,13 +50,17 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
     c. Select your username to ensure that it saves to your account. 
         <i>-Please note that <b>ALL</b> users can currently view all other users and save students to their accounts. Future updates will address this issue.</i>
 <img width="750" alt="Screenshot 2023-09-29 at 10 20 46 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ae0b4b07-0d6e-41b9-bb40-599709703659">
+<br>
 2. To view a list of all your students, click on the ``all students`` in the navigation menu or the home page. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 21 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/e0ea6254-a2ba-4fc4-90ab-17534b2652f6">
+<br>
 3. To view the details of an individual student and the last three existing lesson summaries, click on the name of the concept on the ``all students`` page. 
-<img width="750" alt="Screenshot 2023-09-29 at 10 21 22 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/179d709c-8bca-4a56-ac7f-d47095023421">
-4. On the student's page, you can edit/delete the student's details by clicking the corresponding button. 
+1. 4. On the student's page, you can edit/delete the student's details by clicking the corresponding button. 
 5. After editing the student, make sure to click save.        
     <i>-Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>ALL</b> users.</i> 
+
+<img width="750" alt="Screenshot 2023-09-29 at 10 21 22 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/179d709c-8bca-4a56-ac7f-d47095023421">
+
 
 #### Lesson Notes and Summaries. 
 1. From the student's details page, you can view existing lesson summaries. 
