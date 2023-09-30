@@ -8,19 +8,22 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 ## How to use Lesson Summary Generator 
 #### Signup and Log-in 
 1. Click [here](https://dashboard.heroku.com/apps/lessonsummarygenerator
-) to access the site.  
+) to access the site.
 <img width="750" alt="Screenshot 2023-09-29 at 10 18 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ebf57290-65ce-45b9-9b70-97ffd9fc1d0f">
-
+<br>
 2. Once the page has loaded, if you do not have an account, ``sign up`` for an account. After signing up, you will be automatically logged in. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 18 16 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/13b8558f-b526-46c5-b9d7-b0aed5df848e">
-3. If you have an account, ``log in `` to access the page. 
+<br>
+1. If you have an account, ``log in `` to access the page. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 18 37 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/c0959e62-dc2d-4f96-bd7e-99427ba340e1">
-4. Once logged in, you can do any of the following from the navigation menu or the home page:
+<br>
+1. Once logged in, you can do any of the following from the navigation menu or the home page:
     - ``Add a concept``
     - ``Add a student`` 
     - ``View all your students``
     - ``View all concepts`` 
-<img width="750" alt="Screenshot 2023-09-29 at 10 17 40 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d77ff882-5765-4df2-877b-ecd2ee3abd2a"></div> 
+
+    <img width="750" alt="Screenshot 2023-09-29 at 10 17 40 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d77ff882-5765-4df2-877b-ecd2ee3abd2a"></div> 
 
  
 #### Concepts 
@@ -29,12 +32,12 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
     b. Provide a description of the concept (250 words or less). 
     c. Add keywords associated with the concept (optional).
 <img width="750" alt="Screenshot 2023-09-29 at 10 19 50 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/adf78519-3e54-477e-8e8f-180b50cb1fab">
-2. To view a list of all your concepts, click on the ``all concepts`` in the navigate menu or the home page. 
+<br>
+1. To view a list of all your concepts, click on the ``all concepts`` in the navigate menu or the home page. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 20 21 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/34be9927-5da4-45a8-9f58-833744dc513a">
-3. To view the details of an individual concept, click on the name of the concept on the ``all concepts`` page. 
-4. To edit/delete the concept, click the corresponding button. 
-5. After editing the concept, make sure to click save.   
-     
+1. To view the details of an individual concept, click on the name of the concept on the ``all concepts`` page. 
+1. To edit/delete the concept, click the corresponding button. 
+1. After editing the concept, make sure to click save.   
 <i>Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>all</b> users.</i> 
 
 #### Students 
