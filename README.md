@@ -7,6 +7,10 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 
 
 ## How to use Lesson Summary Generator 
+<img width="250" alt="Screenshot 2023-09-29 at 10 18 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ebf57290-65ce-45b9-9b70-97ffd9fc1d0f">
+<img width="250" alt="Screenshot 2023-09-29 at 10 18 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/6939bc24-7b7c-4e57-84c8-aec332d51e76">
+<img width="250" alt="Screenshot 2023-09-29 at 10 18 37 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/c0959e62-dc2d-4f96-bd7e-99427ba340e1">
+
 1. Click [here](https://dashboard.heroku.com/apps/lessonsummarygenerator
 ) to access the site.  
 2. Once the page has loaded, if you do not have an account, ``sign up`` for an account. After sign up, you will be automatically logged in. 
