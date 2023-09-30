@@ -86,9 +86,9 @@ Lesson Summary Generator is a mobile-ready web application that offers educators
 ## Future Features 
 as of 10/1/2023
 
-#### Major Structural Changes.  
+#### Planned Structural Changes.  
 1. Include a Front-end [REACT Framework](https://react.dev/) and switch to a Django REST Framework. 
-1. Explore the use of [Tailwind CSS Framwework](https://tailwindcss.com/)
+1. Explore the use of [Tailwind CSS Framwework](https://tailwindcss.com/) and [Sass](https://sass-lang.com/) for more customization.
 1. Explore integration of [Grammarly API](https://developer.grammarly.com/) when writing concepts or editing notes 
 
 #### Quality of Life Improvements 
