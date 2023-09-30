@@ -53,6 +53,8 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
     <i>-Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>ALL</b> users.</i> 
 
 #### Lesson Notes and Summaries. 
+<img width="500" alt="Screenshot 2023-09-29 at 10 24 11 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/8a0c09d1-8bf4-40e7-bde5-fe10c1670436">
+
 1. From the student's details page, you can view existing lesson summaries. 
 2. To generate a new summary, click on the ``enter a new lesson note`` button.
     a. On the lesson note page, fill in the form. As you do so, please keep in mind the following.      
