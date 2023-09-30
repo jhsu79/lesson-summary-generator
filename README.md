@@ -3,7 +3,7 @@ Created by Joshua N Hsu
 [GitHub](https://github.com/jhsu79) | [Linkedin](https://www.linkedin.com/in/joshuanhsu/) | [Portfolio](https://joshuahsu.netlify.app/)
 
 ## Project Description: 
-Lesson Summary Generator is a mobile-ready, responsive web application that offers educators an integrated platform where they can effortlessly create student rosters, outline detailed concepts to be covered, record homework performance, document lesson discussions, and assign future tasks with ease. Leveraging the power of OpenAI, LSG provides instant AI-powered summaries, significantly reducing time and effort spent on manual summarization tasks. Furthermore, LSG empowers instructors to tailor these summaries to their unique teaching styles and objectives, ensuring optimal alignment with their students' needs. This project reimagines educational workflows, making them more efficient, effective, and adaptable to individual teaching philosophies.
+Lesson Summary Generator is a mobile-ready, responsive web application that offers educational professionals an integrated platform where they can effortlessly create student rosters, outline detailed concepts to be covered, record homework performance, document lesson discussions, and assign future tasks with ease. Leveraging the power of OpenAI, LSG provides instant AI-powered summaries, significantly reducing time and effort spent on manual summarization tasks. Furthermore, LSG empowers instructors to tailor these summaries to their unique teaching styles and objectives, ensuring optimal alignment with their students' needs. This project reimagines educational workflows, making them more efficient, effective, and adaptable to individual teaching philosophies.
 
 
 ## How to use Lesson Summary Generator 
