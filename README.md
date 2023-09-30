@@ -3,19 +3,18 @@ Created by Joshua N Hsu
 [GitHub](https://github.com/jhsu79) | [Linkedin](https://www.linkedin.com/in/joshuanhsu/) | [Portfolio](https://joshuahsu.netlify.app/)
 
 ## Project Description: 
-Lesson Summary Generator is a mobile-ready, responsive web application that offers educational professionals an integrated platform where they can effortlessly create student rosters, outline detailed concepts to be covered, record homework performance, document lesson discussions, and assign future tasks with ease. Leveraging the power of OpenAI, LSG provides instant AI-powered summaries, significantly reducing time and effort spent on manual summarization tasks. Furthermore, LSG empowers instructors to tailor these summaries to their unique teaching styles and objectives, ensuring optimal alignment with their students' needs. This project reimagines educational workflows, making them more efficient, effective, and adaptable to individual teaching philosophies.
+Lesson Summary Generator is a mobile-ready, responsive web application that offers educational professionals an integrated platform where they can effortlessly create student rosters, outline detailed concepts to be covered, record homework performance, document lesson discussions, and assign future tasks with ease. Leveraging the power of OpenAI, LSG provides instant AI-powered summaries, significantly reducing the time and effort spent on manual summarization tasks. Furthermore, LSG empowers instructors to tailor these summaries to their unique teaching styles and objectives, ensuring optimal alignment with their students' needs. This project reimagines educational workflows, making them more efficient, effective, and adaptable to individual teaching philosophies.
 
 ## How to use Lesson Summary Generator 
 #### Signup and Log-in 
 <div><img width="500" alt="Screenshot 2023-09-29 at 10 18 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ebf57290-65ce-45b9-9b70-97ffd9fc1d0f">
 <img width="500" alt="Screenshot 2023-09-29 at 10 18 16 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/13b8558f-b526-46c5-b9d7-b0aed5df848e">
 <img width="500" alt="Screenshot 2023-09-29 at 10 18 37 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/c0959e62-dc2d-4f96-bd7e-99427ba340e1">
-<img width="500" alt="Screenshot 2023-09-29 at 10 17 40 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d77ff882-5765-4df2-877b-ecd2ee3abd2a">
-/div> 
+<img width="500" alt="Screenshot 2023-09-29 at 10 17 40 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d77ff882-5765-4df2-877b-ecd2ee3abd2a"></div> 
 1. Click [here](https://dashboard.heroku.com/apps/lessonsummarygenerator
 ) to access the site.  
-2. Once the page has loaded, if you do not have an account, ``sign up`` for an account. After sign up, you will be automatically logged in. 
-3. If you have an account, ``log-in`` to access the page. 
+2. Once the page has loaded, if you do not have an account, ``sign up`` for an account. After signing up, you will be automatically logged in. 
+3. If you have an account, ``log in `` to access the page. 
 4. Once logged in, you can do any of the following from the navigation menu or the home page:
     - ``Add a concept``
     - ``Add a student`` 
@@ -23,9 +22,12 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
     - ``View all concepts`` 
  
 #### Concepts 
+<img width="500" alt="Screenshot 2023-09-29 at 10 19 50 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/adf78519-3e54-477e-8e8f-180b50cb1fab">
+<img width="500" alt="Screenshot 2023-09-29 at 10 20 21 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/34be9927-5da4-45a8-9f58-833744dc513a">
+
 1. To add a concept, click on ``add concept`` in the navigate menu or the home page. 
     a. On the form, provide a name for the concept(required),
-    b. Provide a description for the concept (250 words or less). 
+    b. Provide a description of the concept (250 words or less). 
     c. Add keywords associated with the concept (optional) 
 2. To view a list of all your concepts, click on the ``all concepts`` in the navigate menu or the home page. 
 3. To view the details of an individual concept, click on the name of the concept on the ``all concepts`` page. 
@@ -35,12 +37,16 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 <i>Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>all</b> users.</i> 
 
 #### Students 
+<div><img width="1702" alt="Screenshot 2023-09-29 at 10 20 46 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ae0b4b07-0d6e-41b9-bb40-599709703659">
+<img width="500" alt="Screenshot 2023-09-29 at 10 21 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/e0ea6254-a2ba-4fc4-90ab-17534b2652f6">
+<img width="1702" alt="Screenshot 2023-09-29 at 10 21 22 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/179d709c-8bca-4a56-ac7f-d47095023421"></div>
+
 1. To add a student, click on ``add student`` in the navigate menu or the home page. 
     a. On the form, provide the student's first name and last name for the concept(required),
     b. Select the program type: 1-on-1 tutoring, small group, or classroom. 
     c. Select your username to ensure that it saves to your account. 
-        <i>-Please note that <b>ALL</b> users can currently view all other users and save students to their account. Future updates will address this issue.</i>
-2. To view a list of all your stduents, click on the ``all students`` in the navigate menu or the home page. 
+        <i>-Please note that <b>ALL</b> users can currently view all other users and save students to their accounts. Future updates will address this issue.</i>
+2. To view a list of all your students, click on the ``all students`` in the navigation menu or the home page. 
 3. To view the details of an individual student and the last three existing lesson summaries, click on the name of the concept on the ``all students`` page. 
 4. On the student's page, you can edit/delete the student's details by clicking the corresponding button. 
 5. After editing the student, make sure to click save.        
@@ -51,7 +57,7 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 2. To generate a new summary, click on the ``enter a new lesson note`` button.
     a. On the lesson note page, fill in the form. As you do so, please keep in mind the following.      
     1.  You can only select the student that is provided.
-    1. Enter the month, date, year as MM/DD/YYYY.  
+    1. Enter the month, date, and year as MM/DD/YYYY.  
     1. For accuracy level, we recommend you use a percentage but you may use words. 
     1. For concepts, you may select as many as you need. 
     1. For all comments, feel free to be as descriptive or brief as needed. 
@@ -83,7 +89,7 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
         b. Python dotenv 
 6. Ensure that all other dependencies are present. 
 7. Touch a dotenv file. 
-        1. Enter the local django SECRET_KEY. 
+        1. Enter the local Django SECRET_KEY. 
         1. Enter your OPEN_AI_KEY. If you do not have one, you will need to sign up for one and provide a credit card. 
 8. Create a superuser in the terminal.
 9. In the terminal, type ``python3 manage.py runserver``.
@@ -99,7 +105,7 @@ as of 10/1/2023
 1. Explore integration of [Grammarly API](https://developer.grammarly.com/) when writing concepts or editing notes 
 
 #### Quality of Life Improvements 
-1. Update the student form view to only allow for the current user to be selected. 
+1. Update the student form view only to allow the logged-in user to be selected. 
 2. Update the student detail view to include concepts covered from previous lessons.  
 3. Update the student model to include more details about the student. 
 4. Update the student detail view to offer pagination. 
@@ -108,7 +114,7 @@ as of 10/1/2023
 7. Include calendar widgets. 
 8. Allow users to provide direct links to homework. 
 9. Upgrade accessibility features. 
-10. Adding grammar, tone and style buttons that can prompt the LSG to revise summaries based on the preferences of the instructor and needs of the student's families
+10. Adding grammar, tone, and style buttons that can prompt the LSG to revise summaries based on the preferences of the instructor and the needs of the student's families
 
 #### Want to contribute to this project? 
 Contact me on [GitHub](https://github.com/jhsu79) or on [Linkedin](https://www.linkedin.com/in/joshuanhsu/)
