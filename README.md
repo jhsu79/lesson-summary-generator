@@ -5,12 +5,12 @@ Created by Joshua N Hsu
 ## Project Description: 
 Lesson Summary Generator is a mobile-ready, responsive web application that offers educational professionals an integrated platform where they can effortlessly create student rosters, outline detailed concepts to be covered, record homework performance, document lesson discussions, and assign future tasks with ease. Leveraging the power of OpenAI, LSG provides instant AI-powered summaries, significantly reducing time and effort spent on manual summarization tasks. Furthermore, LSG empowers instructors to tailor these summaries to their unique teaching styles and objectives, ensuring optimal alignment with their students' needs. This project reimagines educational workflows, making them more efficient, effective, and adaptable to individual teaching philosophies.
 
-## Screenshots
-<img width="500" alt="Screenshot 2023-09-29 at 10 18 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ebf57290-65ce-45b9-9b70-97ffd9fc1d0f">
-<img width="500" alt="Screenshot 2023-09-29 at 10 18 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/6939bc24-7b7c-4e57-84c8-aec332d51e76">
-<img width="500" alt="Screenshot 2023-09-29 at 10 18 37 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/c0959e62-dc2d-4f96-bd7e-99427ba340e1">
-
 ## How to use Lesson Summary Generator 
+#### Signup and Log-in 
+<img width="500" alt="Screenshot 2023-09-29 at 10 18 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ebf57290-65ce-45b9-9b70-97ffd9fc1d0f">
+<img width="1707" alt="Screenshot 2023-09-29 at 10 18 16 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/13b8558f-b526-46c5-b9d7-b0aed5df848e">
+<img width="500" alt="Screenshot 2023-09-29 at 10 18 37 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/c0959e62-dc2d-4f96-bd7e-99427ba340e1">
+<img width="500" alt="Screenshot 2023-09-29 at 10 17 40 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d77ff882-5765-4df2-877b-ecd2ee3abd2a">
 1. Click [here](https://dashboard.heroku.com/apps/lessonsummarygenerator
 ) to access the site.  
 2. Once the page has loaded, if you do not have an account, ``sign up`` for an account. After sign up, you will be automatically logged in. 
