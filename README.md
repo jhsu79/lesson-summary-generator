@@ -43,19 +43,20 @@ Lesson Summary Generator is a mobile-ready web application that offers educators
 1. From the student's details page, you can view existing lesson summaries. 
 2. To generate a new summary, click on the ``enter a new lesson note`` button.
     a. On the lesson note page, fill in the form. As you do so, please keep in mind the following.      
-    1.  You can only select the student that is provided. 
-    2. For accuracy level, we recommend you use a percentage but you may use words. 
-    3. For concepts, you may select as many as you need. 
-    4. For all comments, feel free to be as descriptive or brief as needed. 
-    5. Private notes are necessary.  
-    6. Structure the homework as an ordered list.   
+    1.  You can only select the student that is provided.
+    1. Enter the month, date, year as MM/DD/YYYY.  
+    1. For accuracy level, we recommend you use a percentage but you may use words. 
+    1. For concepts, you may select as many as you need. 
+    1. For all comments, feel free to be as descriptive or brief as needed. 
+    1. Private notes are necessary.  
+    1. Structure the homework as an ordered list.   
     1.  Make sure to <b>leave the lesson summary blank.</b>  
-3. Click ``save and generate summary`` to create a lesson summary. 
-4. Once the summary has been generated, you can view and edit the notes and summary. 
+1. Click ``save and generate summary`` to create a lesson summary. 
+1. Once the summary has been generated, you can view and edit the notes and summary. 
     <i>-Please note that the summary will not generate only once.</i>
-5. You can also delete the notes and summary with the corresponding button.
+1. You can also delete the notes and summary with the corresponding button.
     <i> -Please note that this action cannot be undone. </i>
-6. You can now view all saved summaries on the student's detail page. 
+1. You can now view all saved summaries on the student's detail page. 
 
 ## Technologies Used & Documentation  
 1. [Python](https://www.python.org/doc/)
@@ -81,3 +82,25 @@ Lesson Summary Generator is a mobile-ready web application that offers educators
 9. In the terminal, type ``python3 manage.py runserver``.
 10.  Ensure that your credentials work at localhost:8000/admin.
 11. If desired, Modify the ``max_tokens`` for the summaries in ``main_app/views.py`` as needed. It is currently set to the maximum. For more info about the appropriate number of tokens and billing, view the [documentation]((https://platform.openai.com/docs/)).
+
+## Future Features 
+as of 10/1/2023
+
+#### Major Structural Changes.  
+1. Include a Front-end [REACT Framework](https://react.dev/) and switch to a Django REST Framework. 
+1. Explore the use of [Tailwind CSS Framwework](https://tailwindcss.com/)
+1. Explore integration of [Grammarly API](https://developer.grammarly.com/) when writing concepts or editing notes 
+
+#### Quality of Life Improvements 
+1. Update the Student Form View to only allow for the current user to be selected. 
+2. Update the Student detail view to include concepts covered from previous lessons.  
+3. Update the Student model to include more details about the student. 
+4. Update the Student detail view to offer pagination. 
+5. Allow users to search for concepts using keywords. 
+6. Finesse the inputs for the lesson note form and finesse the prompt for the summary. 
+7. Include Calendar Widgets. 
+8. Allow users to provide direct links to homework. 
+9. Upgrade accessibility features. 
+10. Adding grammar, tone and style buttons that can prompt the LSG to revise summaries based on the preferences of the instructor and needs of the student's families
+
+
