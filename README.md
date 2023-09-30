@@ -37,9 +37,9 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 <i>Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>all</b> users.</i> 
 
 #### Students 
-<div><img width="1702" alt="Screenshot 2023-09-29 at 10 20 46 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ae0b4b07-0d6e-41b9-bb40-599709703659">
+<div><img width="500" alt="Screenshot 2023-09-29 at 10 20 46 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ae0b4b07-0d6e-41b9-bb40-599709703659">
 <img width="500" alt="Screenshot 2023-09-29 at 10 21 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/e0ea6254-a2ba-4fc4-90ab-17534b2652f6">
-<img width="1702" alt="Screenshot 2023-09-29 at 10 21 22 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/179d709c-8bca-4a56-ac7f-d47095023421"></div>
+<img width="500" alt="Screenshot 2023-09-29 at 10 21 22 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/179d709c-8bca-4a56-ac7f-d47095023421"></div>
 
 1. To add a student, click on ``add student`` in the navigate menu or the home page. 
     a. On the form, provide the student's first name and last name for the concept(required),
