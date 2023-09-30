@@ -7,10 +7,11 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 
 ## How to use Lesson Summary Generator 
 #### Signup and Log-in 
-<img width="500" alt="Screenshot 2023-09-29 at 10 18 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ebf57290-65ce-45b9-9b70-97ffd9fc1d0f">
-<img width="1707" alt="Screenshot 2023-09-29 at 10 18 16 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/13b8558f-b526-46c5-b9d7-b0aed5df848e">
+<div><img width="500" alt="Screenshot 2023-09-29 at 10 18 04 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/ebf57290-65ce-45b9-9b70-97ffd9fc1d0f">
+<img width="500" alt="Screenshot 2023-09-29 at 10 18 16 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/13b8558f-b526-46c5-b9d7-b0aed5df848e">
 <img width="500" alt="Screenshot 2023-09-29 at 10 18 37 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/c0959e62-dc2d-4f96-bd7e-99427ba340e1">
 <img width="500" alt="Screenshot 2023-09-29 at 10 17 40 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d77ff882-5765-4df2-877b-ecd2ee3abd2a">
+/div> 
 1. Click [here](https://dashboard.heroku.com/apps/lessonsummarygenerator
 ) to access the site.  
 2. Once the page has loaded, if you do not have an account, ``sign up`` for an account. After sign up, you will be automatically logged in. 
