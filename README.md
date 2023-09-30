@@ -1,7 +1,7 @@
 #[Lesson Summary Generator](https://dashboard.heroku.com/apps/lessonsummarygenerator)
 
 ## Project Description: 
-Lesson Summary Generator is a responsive web application that offers educators an integrated platform where they can effortlessly create student rosters, outline detailed concepts to be covered, record homework performance, document lesson discussions, and assign future tasks with ease. Leveraging the power of OpenAI, LSG provides instant AI-powered summaries, significantly reducing time and effort spent on manual summarization tasks. Furthermore, LSG empowers instructors to tailor these summaries to their unique teaching styles and objectives, ensuring optimal alignment with their students' needs. This project reimagines educational workflows, making them more efficient, effective, and adaptable to individual teaching philosophies.
+Lesson Summary Generator is a mobile-ready web application that offers educators an integrated platform where they can effortlessly create student rosters, outline detailed concepts to be covered, record homework performance, document lesson discussions, and assign future tasks with ease. Leveraging the power of OpenAI, LSG provides instant AI-powered summaries, significantly reducing time and effort spent on manual summarization tasks. Furthermore, LSG empowers instructors to tailor these summaries to their unique teaching styles and objectives, ensuring optimal alignment with their students' needs. This project reimagines educational workflows, making them more efficient, effective, and adaptable to individual teaching philosophies.
 
 
 ## How to use Lesson Summary Generator 
@@ -15,7 +15,7 @@ Lesson Summary Generator is a responsive web application that offers educators a
     - ``View all your students``
     - ``View all concepts`` 
  
-### Concepts 
+#### Concepts 
 1. To add a concept, click on ``add concept`` in the navigate menu or the home page. 
     a. On the form, provide a name for the concept(required),
     b. Provide a description for the concept (250 words or less). 
@@ -27,27 +27,35 @@ Lesson Summary Generator is a responsive web application that offers educators a
      
 <i>Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>all</b> users.</i> 
 
-### Students 
+#### Students 
 1. To add a student, click on ``add student`` in the navigate menu or the home page. 
     a. On the form, provide the student's first name and last name for the concept(required),
     b. Select the program type: 1-on-1 tutoring, small group, or classroom. 
     c. Select your username to ensure that it saves to your account. 
-        <i>Please that <b>ALL</b> users can currently view all other users and save students to their account. Future updates will address this issue.</i>
+        <i>-Please note that <b>ALL</b> users can currently view all other users and save students to their account. Future updates will address this issue.</i>
 2. To view a list of all your stduents, click on the ``all students`` in the navigate menu or the home page. 
 3. To view the details of an individual student and the last three existing lesson summaries, click on the name of the concept on the ``all students`` page. 
 4. On the student's page, you can edit/delete the student's details by clicking the corresponding button. 
 5. After editing the student, make sure to click save.        
-    <i>Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>ALL</b> users.</i> 
+    <i>-Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>ALL</b> users.</i> 
 
-### Lesson Notes and Summaries. 
+#### Lesson Notes and Summaries. 
 1. From the student's details page, you can view existing lesson summaries. 
-1. To generate a new summary, click on the ``enter a new lesson note`` button.
-    a. On the lesson note page, fill in the form. 
-    b. Make sure to leave the lesson summary blank.  
-    1. Click ``save and generate summary`` to create a lesson summary. 
-    1. 
-
-
+2. To generate a new summary, click on the ``enter a new lesson note`` button.
+    a. On the lesson note page, fill in the form. As you do so, please keep in mind the following.      
+    1.  You can only select the student that is provided. 
+    2. For accuracy level, we recommend you use a percentage but you may use words. 
+    3. For concepts, you may select as many as you need. 
+    4. For all comments, feel free to be as descriptive or brief as needed. 
+    5. Private notes are necessary.  
+    6. Structure the homework as an ordered list.   
+    1.  Make sure to <b>leave the lesson summary blank.</b>  
+3. Click ``save and generate summary`` to create a lesson summary. 
+4. Once the summary has been generated, you can view and edit the notes and summary. 
+    <i>-Please note that the summary will not generate only once.</i>
+5. You can also delete the notes and summary with the corresponding button.
+    <i> -Please note that this action cannot be undone. </i>
+6. You can now view all saved summaries on the student's detail page. 
 
 ## Technologies Used & Documentation  
 1. [Python](https://www.python.org/doc/)
@@ -55,8 +63,6 @@ Lesson Summary Generator is a responsive web application that offers educators a
 3. [PostgreSQL](https://www.postgresql.org/docs/)
 4. [OpenAI API](https://platform.openai.com/docs/)
 5. [Bootstrap (CSS Framework)](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-
-
 
 
 ## Instructions to use your own version of LSG    
@@ -70,5 +76,8 @@ Lesson Summary Generator is a responsive web application that offers educators a
 6. Ensure that all other dependencies are present. 
 7. Touch a dotenv file. 
         1. Enter the local django SECRET_KEY. 
-        1. Enter your OPEN_AI_KEY. If you do not have one, you will need to sign up for one and create a paying account. 
-8. In the terminal, type python3 manage.py runserver.
+        1. Enter your OPEN_AI_KEY. If you do not have one, you will need to sign up for one and provide a credit card. 
+8. Create a superuser in the terminal.
+9. In the terminal, type ``python3 manage.py runserver``.
+10.  Ensure that your credentials work at localhost:8000/admin.
+11. If desired, Modify the ``max_tokens`` for the summaries in ``main_app/views.py`` as needed. It is currently set to the maximum. For more info about the appropriate number of tokens and billing, view the [documentation]((https://platform.openai.com/docs/)).
