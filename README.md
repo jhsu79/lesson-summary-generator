@@ -33,7 +33,8 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 <img width="750" alt="Screenshot 2023-09-29 at 10 20 21 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/34be9927-5da4-45a8-9f58-833744dc513a">
 3. To view the details of an individual concept, click on the name of the concept on the ``all concepts`` page. 
 4. To edit/delete the concept, click the corresponding button. 
-5. After editing the concept, make sure to click save.   
+5. After editing the concept, make sure to click save.
+<img width="750" alt="Screenshot 2023-09-30 at 12 24 29 AM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d4608808-537a-419d-ac34-08ab393989e2">
      
 <i>Please note that in order to generate a lesson note and summary, you can create a concept first or pull from an existing concept. Also note that concepts are currently shared among <b>all</b> users.</i> 
 
