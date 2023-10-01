@@ -23,7 +23,7 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
     - ``View all your students``
     - ``View all concepts`` 
 
-    <img width="750" alt="Screenshot 2023-09-29 at 10 17 40 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d77ff882-5765-4df2-877b-ecd2ee3abd2a"></div> 
+<img width="750" alt="Screenshot 2023-09-29 at 10 17 40 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/d77ff882-5765-4df2-877b-ecd2ee3abd2a"></div> 
 
  
 #### Concepts 
