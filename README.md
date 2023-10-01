@@ -14,10 +14,10 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 2. Once the page has loaded, if you do not have an account, ``sign up`` for an account. After signing up, you will be automatically logged in. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 18 16 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/13b8558f-b526-46c5-b9d7-b0aed5df848e">
 <br>
-1. If you have an account, ``log in`` to access the page. 
+3. If you have an account, ``log in`` to access the page. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 18 37 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/c0959e62-dc2d-4f96-bd7e-99427ba340e1">
 <br>
-1. Once logged in, you can do any of the following from the navigation menu or the home page:
+4. Once logged in, you can do any of the following from the navigation menu or the home page:
     - ``Add a concept``
     - ``Add a student`` 
     - ``View all your students``
@@ -33,7 +33,7 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
     c. Add keywords associated with the concept (optional).
 <img width="750" alt="Screenshot 2023-09-29 at 10 19 50 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/adf78519-3e54-477e-8e8f-180b50cb1fab">
 <br>
-1. To view a list of all your concepts, click on the ``all concepts`` in the navigate menu or the home page. 
+2. To view a list of all your concepts, click on the ``all concepts`` in the navigate menu or the home page. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 20 21 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/34be9927-5da4-45a8-9f58-833744dc513a">
 <br>
 3. To view the details of an individual concept, click on the name of the concept on the ``all concepts`` page. 
@@ -66,23 +66,23 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 1. From the student's details page, you can view existing lesson summaries. 
 2. To generate a new summary, click on the ``enter a new lesson note`` button.
     a. On the lesson note page, fill in the form. As you do so, please keep in mind the following.      
-    1.  You can only select the student that is provided.
-    1. Enter the month, date, and year as MM/DD/YYYY.  
-    1. For accuracy level, we recommend you use a percentage but you may use words. 
-    1. For concepts, you may select as many as you need. 
-    1. For all comments, feel free to be as descriptive or brief as needed. 
-    1. Private notes are necessary.  
-    1. Structure the homework as an ordered list.   
-    1.  Make sure to <b>leave the lesson summary blank.</b>  
-1. Click ``save and generate summary`` to create a lesson summary. 
+    b.  You can only select the student that is provided.
+    c. Enter the month, date, and year as MM/DD/YYYY.  
+    d. For accuracy level, we recommend you use a percentage but you may use words. 
+    e. For concepts, you may select as many as you need. 
+    f. For all comments, feel free to be as descriptive or brief as needed. 
+    g. Private notes are necessary.  
+    h. Structure the homework as an ordered list.   
+    i.  Make sure to <b>leave the lesson summary blank.</b>  
+3. Click ``save and generate summary`` to create a lesson summary. 
 <i>Here is an example of how to fill out the ofrm</i>
 <img width="500" alt="Screenshot 2023-09-29 at 10 24 11 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/8a0c09d1-8bf4-40e7-bde5-fe10c1670436">
 
-1. Once the summary has been generated, you can view and edit the notes and summary. 
+4. Once the summary has been generated, you can view and edit the notes and summary. 
     <i>-Please note that the summary will not generate only once.</i>
-1. You can also delete the notes and summary with the corresponding button.
+5. You can also delete the notes and summary with the corresponding button.
     <i> -Please note that this action cannot be undone. </i>
-1. You can now view all saved summaries on the student's detail page. 
+6. You can now view all saved summaries on the student's detail page. 
 
 ## Technologies Used & Documentation  
 1. [Python](https://www.python.org/doc/)
@@ -114,8 +114,8 @@ as of 10/1/2023
 
 #### Planned Structural Changes.  
 1. Include a Front-end [REACT Framework](https://react.dev/) and switch to a [Django REST Framework](https://www.django-rest-framework.org/). 
-1. Explore the use of [Tailwind CSS Framwework](https://tailwindcss.com/) and [Sass](https://sass-lang.com/) for more direct CSS customization.
-1. Explore integration of [Grammarly API](https://developer.grammarly.com/) when writing concepts or editing notes 
+2. Explore the use of [Tailwind CSS Framwework](https://tailwindcss.com/) and [Sass](https://sass-lang.com/) for more direct CSS customization.
+3. Explore integration of [Grammarly API](https://developer.grammarly.com/) when writing concepts or editing notes 
 
 #### Quality of Life Improvements 
 1. Update the student form view only to allow the logged-in user to be selected. 
