@@ -14,7 +14,7 @@ Lesson Summary Generator is a mobile-ready, responsive web application that offe
 2. Once the page has loaded, if you do not have an account, ``sign up`` for an account. After signing up, you will be automatically logged in. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 18 16 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/13b8558f-b526-46c5-b9d7-b0aed5df848e">
 <br>
-1. If you have an account, ``log in `` to access the page. 
+1. If you have an account, ``log in`` to access the page. 
 <img width="750" alt="Screenshot 2023-09-29 at 10 18 37 PM" src="https://github.com/jhsu79/lesson-note-generator/assets/137417888/c0959e62-dc2d-4f96-bd7e-99427ba340e1">
 <br>
 1. Once logged in, you can do any of the following from the navigation menu or the home page:
