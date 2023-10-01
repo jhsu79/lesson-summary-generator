@@ -1,4 +1,5 @@
-#[Lesson Summary Generator](https://dashboard.heroku.com/apps/lessonsummarygenerator)
+# LESSON SUMMARY GENERATOR
+[Lesson Summary Generator](https://dashboard.heroku.com/apps/lessonsummarygenerator)
 Created by Joshua N Hsu
 [GitHub](https://github.com/jhsu79) | [Linkedin](https://www.linkedin.com/in/joshuanhsu/) | [Portfolio](https://joshuahsu.netlify.app/)
 
