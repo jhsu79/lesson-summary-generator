@@ -1,4 +1,4 @@
-#[Lesson Summary Generator](https://dashboard.heroku.com/apps/lessonsummarygenerator)
+#[Lesson Summary Generator](https://lessonsummarygenerator-be7e909808c1.herokuapp.com/accounts/login/)
 Created by Joshua N Hsu
 
 [GitHub](https://github.com/jhsu79) | [Linkedin](https://www.linkedin.com/in/joshuanhsu/) | [Portfolio](https://joshuahsu.netlify.app/)
